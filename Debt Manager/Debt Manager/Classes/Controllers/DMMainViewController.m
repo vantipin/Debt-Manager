@@ -12,7 +12,7 @@
 #import "DebtCell.h"
 #import "User.h"
 
-#define AddDebtSeagueId @""
+#define AddDebtSeagueId @"addDebtSeague"
 
 @interface DMMainViewController ()
 {
@@ -52,13 +52,7 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:AddDebtSeagueId]) {
-        DMAddDebtViewController *addDebtController = [segue destinationViewController];
-        addDebtController.showContactsOnViewWillAppear = YES;
-    }
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -86,17 +80,20 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row < self.dataSourceDebts.count) {
         Debt *debt = self.dataSourceDebts[indexPath.row];
-        [self performSegueWithIdentifier:@"FromMainToDebtDetail" sender:debt];
+        [self performSegueWithIdentifier:AddDebtSeagueId sender:debt];
     }
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UIViewController *controller = segue.destinationViewController;
+    DMAddDebtViewController *controller = segue.destinationViewController;
+    
     if ([controller isKindOfClass:[DMAddDebtViewController class]]) {
         if (sender && [sender isKindOfClass:[Debt class]]) {
-            ((DMAddDebtViewController *)controller).debt = sender;
+            controller.debt = sender;
+        } else {
+            controller.showContactsOnViewWillAppear = YES;
         }
     }
 }
