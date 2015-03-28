@@ -7,6 +7,7 @@
 //
 
 #import "DMSettingsController.h"
+#import "DataManager.h"
 
 @interface DMSettingsController ()
 
@@ -19,12 +20,31 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark UITextField
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
 
+- (IBAction)textFiedDidChange:(UITextField *)textField {
+    NSNumber *number = @(textField.text.integerValue);
+    if (number) {
+        NSString *key = (textField == self.borrowLimitTextField) ? DefaultRecommendedValueBorrow : (textField == self.lendLimitTextField) ? DefaultRecommendedValueLend : nil;
+        if (key) {
+            [[DataManager sharedInstance] setValue:number forKey:key];
+        }
+    }
+}
 
 @end
