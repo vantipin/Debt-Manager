@@ -16,7 +16,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPicLargePlaceholder.png" id="xwl-zx-3BS">
+                                    <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreenIcon.png" id="xwl-zx-3BS">
                                         <rect key="frame" x="40" y="110" width="240" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -110,17 +110,23 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300/300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d4q-ix-Isr">
-                                                <rect key="frame" x="57" y="11" width="103" height="21"/>
+                                                <rect key="frame" x="57" y="5" width="85" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="u2e-2t-Ser">
-                                                <rect key="frame" x="8" y="12" width="41" height="20"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="borrowIcon.png" id="u2e-2t-Ser">
+                                                <rect key="frame" x="19" y="5" width="34" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.8443426342" green="0.99087473999999998" blue="0.83878110839999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borrowed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ej-tR-Fj5">
+                                                <rect key="frame" x="59" y="24" width="46" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" id="mwu-Jj-kmn">
@@ -128,17 +134,23 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300/300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ksm-GX-mI8">
-                                                <rect key="frame" x="57" y="11" width="103" height="21"/>
+                                                <rect key="frame" x="57" y="5" width="85" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="od2-Rw-8NJ">
-                                                <rect key="frame" x="8" y="12" width="41" height="20"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lendIcon.png" id="od2-Rw-8NJ">
+                                                <rect key="frame" x="19" y="5" width="34" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.8443426342" green="0.99087473999999998" blue="0.83878110839999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kwt-jr-xBY">
+                                                <rect key="frame" x="61" y="24" width="42" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -507,8 +519,10 @@ You can configure limits via Settings</string>
     <resources>
         <image name="addIcon.png" width="43" height="43"/>
         <image name="backButtonIndicator.png" width="14" height="26"/>
-        <image name="borrowIcon.png" width="124" height="124"/>
+        <image name="borrowIcon.png" width="108" height="76"/>
+        <image name="lendIcon.png" width="99" height="79"/>
         <image name="settingsIcon.png" width="44" height="46"/>
+        <image name="splashScreenIcon.png" width="93" height="85"/>
         <image name="userPicLargePlaceholder.png" width="114" height="114"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
