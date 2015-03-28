@@ -13,6 +13,8 @@
 		5C5E6D081AC6E3FB009DC264 /* contactsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D021AC6E3FB009DC264 /* contactsIcon@2x.png */; };
 		5C5E6D091AC6E3FB009DC264 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D031AC6E3FB009DC264 /* settingsIcon.png */; };
 		5C5E6D0A1AC6E3FB009DC264 /* settingsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D041AC6E3FB009DC264 /* settingsIcon@2x.png */; };
+		5C5E6D0D1AC6ED95009DC264 /* backButtonIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D0B1AC6ED95009DC264 /* backButtonIndicator.png */; };
+		5C5E6D0E1AC6ED95009DC264 /* backButtonIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D0C1AC6ED95009DC264 /* backButtonIndicator@2x.png */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
@@ -40,6 +42,8 @@
 		5C5E6D021AC6E3FB009DC264 /* contactsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactsIcon@2x.png"; sourceTree = "<group>"; };
 		5C5E6D031AC6E3FB009DC264 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
 		5C5E6D041AC6E3FB009DC264 /* settingsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsIcon@2x.png"; sourceTree = "<group>"; };
+		5C5E6D0B1AC6ED95009DC264 /* backButtonIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButtonIndicator.png; sourceTree = "<group>"; };
+		5C5E6D0C1AC6ED95009DC264 /* backButtonIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButtonIndicator@2x.png"; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		5C5E6CFE1AC6E3FB009DC264 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5C5E6D0B1AC6ED95009DC264 /* backButtonIndicator.png */,
+				5C5E6D0C1AC6ED95009DC264 /* backButtonIndicator@2x.png */,
 				5C5E6CFF1AC6E3FB009DC264 /* addIcon.png */,
 				5C5E6D001AC6E3FB009DC264 /* addIcon@2x.png */,
 				5C5E6D011AC6E3FB009DC264 /* contactsIcon.png */,
@@ -242,8 +248,10 @@
 				5C5E6D071AC6E3FB009DC264 /* contactsIcon.png in Resources */,
 				5C5E6D0A1AC6E3FB009DC264 /* settingsIcon@2x.png in Resources */,
 				D548A8611AC67962002D7DCB /* LaunchScreen.xib in Resources */,
+				5C5E6D0D1AC6ED95009DC264 /* backButtonIndicator.png in Resources */,
 				5C5E6D091AC6E3FB009DC264 /* settingsIcon.png in Resources */,
 				5C5E6D081AC6E3FB009DC264 /* contactsIcon@2x.png in Resources */,
+				5C5E6D0E1AC6ED95009DC264 /* backButtonIndicator@2x.png in Resources */,
 				D548A85E1AC67962002D7DCB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
