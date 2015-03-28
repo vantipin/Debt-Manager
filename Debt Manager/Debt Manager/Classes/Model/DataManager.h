@@ -31,6 +31,7 @@
 - (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType isActive:(BOOL)isActive;
 
 - (UIImage *)imageForType:(DebtType)type;
+- (NSString *)textForType:(DebtType)type;
 
 - (NSArray *)fetchRequestForObjectName:(NSString *)objName
                          withPredicate:(NSPredicate *)predicate;

@@ -106,6 +106,20 @@ static DataManager *instance = nil;
     }
 }
 
+- (NSString *)textForType:(DebtType)type;
+{
+    if (type == BORROW_TYPE) {
+        return @"Borrowed";
+    }
+    else if (type == LEND_TYPE) {
+        return @"Lent";
+    }
+    else {
+        return @"";
+    }
+}
+
+
 
 + (UIImage *)imageForID:(NSString *)anId
 {
