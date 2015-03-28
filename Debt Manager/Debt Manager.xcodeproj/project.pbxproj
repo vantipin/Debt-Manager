@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5090F3B1AC6D65E00831399 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5090F3A1AC6D65E00831399 /* AddressBook.framework */; };
-		D5090F3D1AC6D66500831399 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5090F3C1AC6D66500831399 /* AddressBookUI.framework */; };
-		D5090F411AC6D68D00831399 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5090F3E1AC6D68D00831399 /* CoreData.framework */; };
-		D5090F421AC6D68D00831399 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5090F3F1AC6D68D00831399 /* CoreFoundation.framework */; };
-		D5090F431AC6D68D00831399 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5090F401AC6D68D00831399 /* CoreText.framework */; };
-		D5090F561AC6E26F00831399 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F4C1AC6E26F00831399 /* APAddress.m */; };
-		D5090F571AC6E26F00831399 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F4E1AC6E26F00831399 /* APAddressBook.m */; };
-		D5090F581AC6E26F00831399 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F501AC6E26F00831399 /* APContact.m */; };
-		D5090F591AC6E26F00831399 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F521AC6E26F00831399 /* APPhoneWithLabel.m */; };
-		D5090F5A1AC6E26F00831399 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F541AC6E26F00831399 /* APSocialProfile.m */; };
-		D5090F5D1AC6E3DD00831399 /* DMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */; };
-		D5090F601AC6E4DE00831399 /* DMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F5F1AC6E4DE00831399 /* DMView.m */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
@@ -26,6 +14,21 @@
 		D548A85E1AC67962002D7DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D548A85D1AC67962002D7DCB /* Images.xcassets */; };
 		D548A8611AC67962002D7DCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D548A85F1AC67962002D7DCB /* LaunchScreen.xib */; };
 		D548A86D1AC67962002D7DCB /* Debt_ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A86C1AC67962002D7DCB /* Debt_ManagerTests.m */; };
+		D5E8FEE21AC6EF9C001DA296 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEC61AC6EF9C001DA296 /* addIcon.png */; };
+		D5E8FEE31AC6EF9C001DA296 /* addIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEC71AC6EF9C001DA296 /* addIcon@2x.png */; };
+		D5E8FEE41AC6EF9C001DA296 /* backButtonIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEC81AC6EF9C001DA296 /* backButtonIndicator.png */; };
+		D5E8FEE51AC6EF9C001DA296 /* backButtonIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEC91AC6EF9C001DA296 /* backButtonIndicator@2x.png */; };
+		D5E8FEE61AC6EF9C001DA296 /* contactsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FECA1AC6EF9C001DA296 /* contactsIcon.png */; };
+		D5E8FEE71AC6EF9C001DA296 /* contactsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FECB1AC6EF9C001DA296 /* contactsIcon@2x.png */; };
+		D5E8FEE81AC6EF9C001DA296 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FECC1AC6EF9C001DA296 /* settingsIcon.png */; };
+		D5E8FEE91AC6EF9C001DA296 /* settingsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FECD1AC6EF9C001DA296 /* settingsIcon@2x.png */; };
+		D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */; };
+		D5E8FEEB1AC6EF9C001DA296 /* DMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FED41AC6EF9C001DA296 /* DMView.m */; };
+		D5E8FEEC1AC6EF9C001DA296 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FED81AC6EF9C001DA296 /* APAddress.m */; };
+		D5E8FEED1AC6EF9C001DA296 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEDA1AC6EF9C001DA296 /* APAddressBook.m */; };
+		D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEDC1AC6EF9C001DA296 /* APContact.m */; };
+		D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEDE1AC6EF9C001DA296 /* APPhoneWithLabel.m */; };
+		D5E8FEF01AC6EF9C001DA296 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEE01AC6EF9C001DA296 /* APSocialProfile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,26 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D5090F3A1AC6D65E00831399 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		D5090F3C1AC6D66500831399 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		D5090F3E1AC6D68D00831399 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D5090F3F1AC6D68D00831399 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		D5090F401AC6D68D00831399 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		D5090F4B1AC6E26F00831399 /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
-		D5090F4C1AC6E26F00831399 /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddress.m; sourceTree = "<group>"; };
-		D5090F4D1AC6E26F00831399 /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBook.h; sourceTree = "<group>"; };
-		D5090F4E1AC6E26F00831399 /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBook.m; sourceTree = "<group>"; };
-		D5090F4F1AC6E26F00831399 /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContact.h; sourceTree = "<group>"; };
-		D5090F501AC6E26F00831399 /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContact.m; sourceTree = "<group>"; };
-		D5090F511AC6E26F00831399 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhoneWithLabel.h; sourceTree = "<group>"; };
-		D5090F521AC6E26F00831399 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhoneWithLabel.m; sourceTree = "<group>"; };
-		D5090F531AC6E26F00831399 /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
-		D5090F541AC6E26F00831399 /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
-		D5090F551AC6E26F00831399 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
-		D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMainViewController.m; sourceTree = "<group>"; };
-		D5090F5C1AC6E3DD00831399 /* DMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMainViewController.h; sourceTree = "<group>"; };
-		D5090F5E1AC6E4DE00831399 /* DMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMView.h; sourceTree = "<group>"; };
-		D5090F5F1AC6E4DE00831399 /* DMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMView.m; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +54,29 @@
 		D548A8661AC67962002D7DCB /* Debt ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Debt ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A86B1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A86C1AC67962002D7DCB /* Debt_ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Debt_ManagerTests.m; sourceTree = "<group>"; };
+		D5E8FEC61AC6EF9C001DA296 /* addIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addIcon.png; sourceTree = "<group>"; };
+		D5E8FEC71AC6EF9C001DA296 /* addIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addIcon@2x.png"; sourceTree = "<group>"; };
+		D5E8FEC81AC6EF9C001DA296 /* backButtonIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButtonIndicator.png; sourceTree = "<group>"; };
+		D5E8FEC91AC6EF9C001DA296 /* backButtonIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButtonIndicator@2x.png"; sourceTree = "<group>"; };
+		D5E8FECA1AC6EF9C001DA296 /* contactsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactsIcon.png; sourceTree = "<group>"; };
+		D5E8FECB1AC6EF9C001DA296 /* contactsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactsIcon@2x.png"; sourceTree = "<group>"; };
+		D5E8FECC1AC6EF9C001DA296 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
+		D5E8FECD1AC6EF9C001DA296 /* settingsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsIcon@2x.png"; sourceTree = "<group>"; };
+		D5E8FED01AC6EF9C001DA296 /* DMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMainViewController.h; sourceTree = "<group>"; };
+		D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMainViewController.m; sourceTree = "<group>"; };
+		D5E8FED31AC6EF9C001DA296 /* DMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMView.h; sourceTree = "<group>"; };
+		D5E8FED41AC6EF9C001DA296 /* DMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMView.m; sourceTree = "<group>"; };
+		D5E8FED71AC6EF9C001DA296 /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
+		D5E8FED81AC6EF9C001DA296 /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddress.m; sourceTree = "<group>"; };
+		D5E8FED91AC6EF9C001DA296 /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBook.h; sourceTree = "<group>"; };
+		D5E8FEDA1AC6EF9C001DA296 /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBook.m; sourceTree = "<group>"; };
+		D5E8FEDB1AC6EF9C001DA296 /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContact.h; sourceTree = "<group>"; };
+		D5E8FEDC1AC6EF9C001DA296 /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContact.m; sourceTree = "<group>"; };
+		D5E8FEDD1AC6EF9C001DA296 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhoneWithLabel.h; sourceTree = "<group>"; };
+		D5E8FEDE1AC6EF9C001DA296 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhoneWithLabel.m; sourceTree = "<group>"; };
+		D5E8FEDF1AC6EF9C001DA296 /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
+		D5E8FEE01AC6EF9C001DA296 /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
+		D5E8FEE11AC6EF9C001DA296 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5090F411AC6D68D00831399 /* CoreData.framework in Frameworks */,
-				D5090F421AC6D68D00831399 /* CoreFoundation.framework in Frameworks */,
-				D5090F431AC6D68D00831399 /* CoreText.framework in Frameworks */,
-				D5090F3D1AC6D66500831399 /* AddressBookUI.framework in Frameworks */,
-				D5090F3B1AC6D65E00831399 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,71 +97,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D5090F451AC6D6C100831399 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F3E1AC6D68D00831399 /* CoreData.framework */,
-				D5090F3F1AC6D68D00831399 /* CoreFoundation.framework */,
-				D5090F401AC6D68D00831399 /* CoreText.framework */,
-				D5090F3C1AC6D66500831399 /* AddressBookUI.framework */,
-				D5090F3A1AC6D65E00831399 /* AddressBook.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D5090F461AC6D70600831399 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F471AC6D70600831399 /* Controllers */,
-				D5090F481AC6D70600831399 /* Views */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		D5090F471AC6D70600831399 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F5C1AC6E3DD00831399 /* DMMainViewController.h */,
-				D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D5090F481AC6D70600831399 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F5E1AC6E4DE00831399 /* DMView.h */,
-				D5090F5F1AC6E4DE00831399 /* DMView.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D5090F491AC6E26F00831399 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F4A1AC6E26F00831399 /* APAddressBook */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		D5090F4A1AC6E26F00831399 /* APAddressBook */ = {
-			isa = PBXGroup;
-			children = (
-				D5090F4B1AC6E26F00831399 /* APAddress.h */,
-				D5090F4C1AC6E26F00831399 /* APAddress.m */,
-				D5090F4D1AC6E26F00831399 /* APAddressBook.h */,
-				D5090F4E1AC6E26F00831399 /* APAddressBook.m */,
-				D5090F4F1AC6E26F00831399 /* APContact.h */,
-				D5090F501AC6E26F00831399 /* APContact.m */,
-				D5090F511AC6E26F00831399 /* APPhoneWithLabel.h */,
-				D5090F521AC6E26F00831399 /* APPhoneWithLabel.m */,
-				D5090F531AC6E26F00831399 /* APSocialProfile.h */,
-				D5090F541AC6E26F00831399 /* APSocialProfile.m */,
-				D5090F551AC6E26F00831399 /* APTypes.h */,
-			);
-			path = APAddressBook;
-			sourceTree = "<group>";
-		};
 		D548A8411AC67962002D7DCB = {
 			isa = PBXGroup;
 			children = (
@@ -182,16 +118,16 @@
 		D548A84C1AC67962002D7DCB /* Debt Manager */ = {
 			isa = PBXGroup;
 			children = (
-				D5090F461AC6D70600831399 /* Classes */,
+				D5E8FEC41AC6EF9C001DA296 /* Resources */,
+				D5E8FECE1AC6EF9C001DA296 /* Classes */,
+				D5E8FED51AC6EF9C001DA296 /* ThirdParty */,
 				D548A8511AC67962002D7DCB /* AppDelegate.h */,
 				D548A8521AC67962002D7DCB /* AppDelegate.m */,
 				D548A85A1AC67962002D7DCB /* Main.storyboard */,
 				D548A85D1AC67962002D7DCB /* Images.xcassets */,
 				D548A85F1AC67962002D7DCB /* LaunchScreen.xib */,
 				D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */,
-				D5090F491AC6E26F00831399 /* ThirdParty */,
 				D548A84D1AC67962002D7DCB /* Supporting Files */,
-				D5090F451AC6D6C100831399 /* Frameworks */,
 			);
 			path = "Debt Manager";
 			sourceTree = "<group>";
@@ -220,6 +156,82 @@
 				D548A86B1AC67962002D7DCB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5E8FEC41AC6EF9C001DA296 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FEC51AC6EF9C001DA296 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5E8FEC51AC6EF9C001DA296 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FEC61AC6EF9C001DA296 /* addIcon.png */,
+				D5E8FEC71AC6EF9C001DA296 /* addIcon@2x.png */,
+				D5E8FEC81AC6EF9C001DA296 /* backButtonIndicator.png */,
+				D5E8FEC91AC6EF9C001DA296 /* backButtonIndicator@2x.png */,
+				D5E8FECA1AC6EF9C001DA296 /* contactsIcon.png */,
+				D5E8FECB1AC6EF9C001DA296 /* contactsIcon@2x.png */,
+				D5E8FECC1AC6EF9C001DA296 /* settingsIcon.png */,
+				D5E8FECD1AC6EF9C001DA296 /* settingsIcon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D5E8FECE1AC6EF9C001DA296 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FECF1AC6EF9C001DA296 /* Controllers */,
+				D5E8FED21AC6EF9C001DA296 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D5E8FECF1AC6EF9C001DA296 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FED01AC6EF9C001DA296 /* DMMainViewController.h */,
+				D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5E8FED21AC6EF9C001DA296 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FED31AC6EF9C001DA296 /* DMView.h */,
+				D5E8FED41AC6EF9C001DA296 /* DMView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5E8FED51AC6EF9C001DA296 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FED61AC6EF9C001DA296 /* APAddressBook */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		D5E8FED61AC6EF9C001DA296 /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FED71AC6EF9C001DA296 /* APAddress.h */,
+				D5E8FED81AC6EF9C001DA296 /* APAddress.m */,
+				D5E8FED91AC6EF9C001DA296 /* APAddressBook.h */,
+				D5E8FEDA1AC6EF9C001DA296 /* APAddressBook.m */,
+				D5E8FEDB1AC6EF9C001DA296 /* APContact.h */,
+				D5E8FEDC1AC6EF9C001DA296 /* APContact.m */,
+				D5E8FEDD1AC6EF9C001DA296 /* APPhoneWithLabel.h */,
+				D5E8FEDE1AC6EF9C001DA296 /* APPhoneWithLabel.m */,
+				D5E8FEDF1AC6EF9C001DA296 /* APSocialProfile.h */,
+				D5E8FEE01AC6EF9C001DA296 /* APSocialProfile.m */,
+				D5E8FEE11AC6EF9C001DA296 /* APTypes.h */,
+			);
+			path = APAddressBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +314,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E8FEE41AC6EF9C001DA296 /* backButtonIndicator.png in Resources */,
+				D5E8FEE81AC6EF9C001DA296 /* settingsIcon.png in Resources */,
+				D5E8FEE31AC6EF9C001DA296 /* addIcon@2x.png in Resources */,
+				D5E8FEE51AC6EF9C001DA296 /* backButtonIndicator@2x.png in Resources */,
+				D5E8FEE61AC6EF9C001DA296 /* contactsIcon.png in Resources */,
+				D5E8FEE21AC6EF9C001DA296 /* addIcon.png in Resources */,
+				D5E8FEE91AC6EF9C001DA296 /* settingsIcon@2x.png in Resources */,
+				D5E8FEE71AC6EF9C001DA296 /* contactsIcon@2x.png in Resources */,
 				D548A85C1AC67962002D7DCB /* Main.storyboard in Resources */,
 				D548A8611AC67962002D7DCB /* LaunchScreen.xib in Resources */,
 				D548A85E1AC67962002D7DCB /* Images.xcassets in Resources */,
@@ -322,16 +342,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5090F5D1AC6E3DD00831399 /* DMMainViewController.m in Sources */,
 				D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */,
-				D5090F561AC6E26F00831399 /* APAddress.m in Sources */,
+				D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */,
+				D5E8FEEC1AC6EF9C001DA296 /* APAddress.m in Sources */,
 				D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */,
-				D5090F5A1AC6E26F00831399 /* APSocialProfile.m in Sources */,
-				D5090F591AC6E26F00831399 /* APPhoneWithLabel.m in Sources */,
-				D5090F571AC6E26F00831399 /* APAddressBook.m in Sources */,
+				D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */,
+				D5E8FEED1AC6EF9C001DA296 /* APAddressBook.m in Sources */,
+				D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */,
 				D548A8501AC67962002D7DCB /* main.m in Sources */,
-				D5090F581AC6E26F00831399 /* APContact.m in Sources */,
-				D5090F601AC6E4DE00831399 /* DMView.m in Sources */,
+				D5E8FEEB1AC6EF9C001DA296 /* DMView.m in Sources */,
+				D5E8FEF01AC6EF9C001DA296 /* APSocialProfile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
