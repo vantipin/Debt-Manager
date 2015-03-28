@@ -31,6 +31,8 @@
 		D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEDC1AC6EF9C001DA296 /* APContact.m */; };
 		D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEDE1AC6EF9C001DA296 /* APPhoneWithLabel.m */; };
 		D5E8FEF01AC6EF9C001DA296 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEE01AC6EF9C001DA296 /* APSocialProfile.m */; };
+		D5E8FEF31AC6F410001DA296 /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEF21AC6F410001DA296 /* DMViewController.m */; };
+		D5E8FEF61AC6F4F7001DA296 /* DMAddDebtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		D5E8FEDF1AC6EF9C001DA296 /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
 		D5E8FEE01AC6EF9C001DA296 /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
 		D5E8FEE11AC6EF9C001DA296 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
+		D5E8FEF11AC6F410001DA296 /* DMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		D5E8FEF21AC6F410001DA296 /* DMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		D5E8FEF41AC6F4F7001DA296 /* DMAddDebtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAddDebtViewController.h; sourceTree = "<group>"; };
+		D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAddDebtViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,10 @@
 			children = (
 				D5E8FED01AC6EF9C001DA296 /* DMMainViewController.h */,
 				D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */,
+				D5E8FEF11AC6F410001DA296 /* DMViewController.h */,
+				D5E8FEF21AC6F410001DA296 /* DMViewController.m */,
+				D5E8FEF41AC6F4F7001DA296 /* DMAddDebtViewController.h */,
+				D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -354,9 +364,11 @@
 				D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */,
 				D5E8FEEC1AC6EF9C001DA296 /* APAddress.m in Sources */,
 				D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */,
+				D5E8FEF31AC6F410001DA296 /* DMViewController.m in Sources */,
 				D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */,
 				D5E8FEED1AC6EF9C001DA296 /* APAddressBook.m in Sources */,
 				D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */,
+				D5E8FEF61AC6F4F7001DA296 /* DMAddDebtViewController.m in Sources */,
 				D548A8501AC67962002D7DCB /* main.m in Sources */,
 				D5E8FEEB1AC6EF9C001DA296 /* DMView.m in Sources */,
 				D5E8FEF01AC6EF9C001DA296 /* APSocialProfile.m in Sources */,

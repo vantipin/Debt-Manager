@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DMAddDebtViewController.h
 //  Debt Manager
 //
 //  Created by Pavel Stoma on 3/28/15.
@@ -8,8 +8,6 @@
 
 #import "DMViewController.h"
 
-@interface DMMainViewController : DMViewController
-
+@interface DMAddDebtViewController : DMViewController
 
 @end
-
