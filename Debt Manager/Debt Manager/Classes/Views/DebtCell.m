@@ -39,6 +39,8 @@
             self.userNameLabel.text = @"";
         }
         
+        self.activity.hidden = YES;
+        
         self.debtDateLabel.text = [DataManager standartDateFormat:debt.date.timeIntervalSince1970];
         self.debtAmountLabel.text = [NSString stringWithFormat:@"%@ %@",debt.typeMoneyDebt, debt.amount];
         

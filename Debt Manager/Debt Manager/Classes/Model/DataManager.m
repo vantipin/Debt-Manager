@@ -60,7 +60,7 @@ static DataManager *instance = nil;
 {
     NSPredicate *predicate;
     if (debtType == BORROW_TYPE || debtType == LEND_TYPE) {
-        predicate = [NSPredicate predicateWithFormat:@"type == %d && isClosed != %d",debtType ,isActive];
+        predicate = [NSPredicate predicateWithFormat:@"typeDebt == %d && isClosed != %d",debtType ,isActive];
     }
     else {
         predicate = [NSPredicate predicateWithFormat:@"isClosed != %d" ,isActive];
