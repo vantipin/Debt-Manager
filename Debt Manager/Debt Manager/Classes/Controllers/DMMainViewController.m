@@ -7,6 +7,9 @@
 //
 
 #import "DMMainViewController.h"
+#import "DMAddDebtViewController.h"
+
+#define AddDebtSeagueId @""
 
 @interface DMMainViewController ()
 
@@ -19,6 +22,15 @@
     
         
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:AddDebtSeagueId]) {
+        DMAddDebtViewController *addDebtController = [segue destinationViewController];
+        
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
