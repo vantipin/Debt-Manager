@@ -12,6 +12,7 @@
 @interface DMAddDebtViewController : DMViewController
 
 @property (nonatomic) Debt *debt;
+@property (weak, nonatomic) IBOutlet UIButton *bottomAddDebtButton;
 @property (weak, nonatomic) IBOutlet UILabel *recommendedLabel;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIButton *amountButton;
@@ -24,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *borrowTextView;
 @property (weak, nonatomic) IBOutlet UIButton *descrButton;
 @property (weak, nonatomic) IBOutlet UILabel *borrowTypeLabel;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *addDebtButtons;
 
 
 @property (nonatomic, assign) BOOL debtMode;

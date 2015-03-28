@@ -28,6 +28,7 @@
 
 @property (nonatomic, assign) BOOL contactsShown;
 @property (nonatomic, strong) DMContactsPopoverController *popoverController;
+@property (nonatomic, strong) APContact *selectedContact;
 
 @end
 
@@ -38,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    debtMode = YES;
+    
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     NSLocale* locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
@@ -91,6 +94,11 @@
         [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
         
         [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
+        
+        NSString *labelName = debtMode ? @"Add borrow" : @"Add lend";
+        [self setTitleName:labelName];
+        [self.bottomAddDebtButton setTitle:labelName forState:UIControlStateNormal];
+        
         
         if (debtMode) {
             
