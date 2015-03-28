@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		5C5E6D151AC6F1A0009DC264 /* arrowsUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D131AC6F1A0009DC264 /* arrowsUpDown.png */; };
 		5C5E6D161AC6F1A0009DC264 /* arrowsUpDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D141AC6F1A0009DC264 /* arrowsUpDown@2x.png */; };
+		5C5E6D1C1AC6F7A0009DC264 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D191AC6F7A0009DC264 /* DataManager.m */; };
+		5C5E6D1D1AC6F7A0009DC264 /* MainContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D1B1AC6F7A0009DC264 /* MainContextObject.m */; };
+		5C5E6D231AC6FA09009DC264 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D221AC6FA09009DC264 /* NSStringAdditions.m */; };
+		5C5E6D251AC6FA9B009DC264 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */; };
+		5C5E6D271AC6FACD009DC264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5E6D261AC6FACD009DC264 /* Foundation.framework */; };
+		5C5E6D2C1AC6FB9E009DC264 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D2B1AC6FB9E009DC264 /* User.m */; };
+		5C5E6D2F1AC6FB9F009DC264 /* Debt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D2E1AC6FB9F009DC264 /* Debt.m */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
@@ -46,6 +53,18 @@
 /* Begin PBXFileReference section */
 		5C5E6D131AC6F1A0009DC264 /* arrowsUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowsUpDown.png; sourceTree = "<group>"; };
 		5C5E6D141AC6F1A0009DC264 /* arrowsUpDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowsUpDown@2x.png"; sourceTree = "<group>"; };
+		5C5E6D181AC6F7A0009DC264 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		5C5E6D191AC6F7A0009DC264 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		5C5E6D1A1AC6F7A0009DC264 /* MainContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContextObject.h; sourceTree = "<group>"; };
+		5C5E6D1B1AC6F7A0009DC264 /* MainContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContextObject.m; sourceTree = "<group>"; };
+		5C5E6D211AC6FA09009DC264 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		5C5E6D221AC6FA09009DC264 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5C5E6D261AC6FACD009DC264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5C5E6D2A1AC6FB9E009DC264 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5C5E6D2B1AC6FB9E009DC264 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5C5E6D2D1AC6FB9F009DC264 /* Debt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debt.h; sourceTree = "<group>"; };
+		5C5E6D2E1AC6FB9F009DC264 /* Debt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debt.m; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5E6D271AC6FACD009DC264 /* Foundation.framework in Frameworks */,
+				5C5E6D251AC6FA9B009DC264 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C5E6D171AC6F7A0009DC264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C5E6D291AC6FB78009DC264 /* Entities */,
+				5C5E6D211AC6FA09009DC264 /* NSStringAdditions.h */,
+				5C5E6D221AC6FA09009DC264 /* NSStringAdditions.m */,
+				5C5E6D181AC6F7A0009DC264 /* DataManager.h */,
+				5C5E6D191AC6F7A0009DC264 /* DataManager.m */,
+				5C5E6D1A1AC6F7A0009DC264 /* MainContextObject.h */,
+				5C5E6D1B1AC6F7A0009DC264 /* MainContextObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C5E6D281AC6FAF7009DC264 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5E6D261AC6FACD009DC264 /* Foundation.framework */,
+				5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C5E6D291AC6FB78009DC264 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5C5E6D2D1AC6FB9F009DC264 /* Debt.h */,
+				5C5E6D2E1AC6FB9F009DC264 /* Debt.m */,
+				5C5E6D2A1AC6FB9E009DC264 /* User.h */,
+				5C5E6D2B1AC6FB9E009DC264 /* User.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		D548A8411AC67962002D7DCB = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +194,7 @@
 		D548A84D1AC67962002D7DCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5C5E6D281AC6FAF7009DC264 /* Frameworks */,
 				D548A84E1AC67962002D7DCB /* Info.plist */,
 				D548A84F1AC67962002D7DCB /* main.m */,
 			);
@@ -190,6 +246,7 @@
 		D5E8FECE1AC6EF9C001DA296 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5C5E6D171AC6F7A0009DC264 /* Model */,
 				D5E8FECF1AC6EF9C001DA296 /* Controllers */,
 				D5E8FED21AC6EF9C001DA296 /* Views */,
 			);
@@ -350,11 +407,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5E6D2F1AC6FB9F009DC264 /* Debt.m in Sources */,
+				5C5E6D231AC6FA09009DC264 /* NSStringAdditions.m in Sources */,
 				D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */,
+				5C5E6D1C1AC6F7A0009DC264 /* DataManager.m in Sources */,
 				D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */,
+				5C5E6D1D1AC6F7A0009DC264 /* MainContextObject.m in Sources */,
 				D5E8FEEC1AC6EF9C001DA296 /* APAddress.m in Sources */,
 				D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */,
 				D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */,
+				5C5E6D2C1AC6FB9E009DC264 /* User.m in Sources */,
 				D5E8FEED1AC6EF9C001DA296 /* APAddressBook.m in Sources */,
 				D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */,
 				D548A8501AC67962002D7DCB /* main.m in Sources */,
