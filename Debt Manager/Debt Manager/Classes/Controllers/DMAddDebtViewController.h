@@ -10,4 +10,6 @@
 
 @interface DMAddDebtViewController : DMViewController
 
+@property (nonatomic, assign) BOOL debtMode;
+
 @end

@@ -40,9 +40,37 @@ static DataManager *instance = nil;
     return _context;
 }
 
+- (UIImage *)imageForID:(NSString *)anId
+{
+    if (anId) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+        NSString *docs = [paths objectAtIndex:0];
+        NSString* path =  [docs stringByAppendingString:[NSString stringWithFormat:@"/image%@.jpg", anId]];
+        
+//        NSData* imageData = [NSData dataWithContentsOfFile:path];
+        
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        return image;
+    }
+    
+    return nil;
+}
 
-
-
+- (void)saveImage:(UIImage *)anImage withId:(NSString *)anId
+{
+    if (anImage && anId) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+        NSString *docs = [paths objectAtIndex:0];
+        NSString* path =  [docs stringByAppendingString:[NSString stringWithFormat:@"/image%@.jpg", anId]];
+        
+        NSData* imageData = [NSData dataWithData:UIImageJPEGRepresentation(anImage, .96)];
+        NSError *writeError = nil;
+        
+        if (![imageData writeToFile:path options:NSDataWritingAtomic error:&writeError]) {
+            NSLog(@"%@: Error saving image: %@", [self class], [writeError localizedDescription]);
+        }
+    }
+}
 
 
 

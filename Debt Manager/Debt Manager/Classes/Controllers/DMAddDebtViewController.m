@@ -9,16 +9,31 @@
 #import "DMAddDebtViewController.h"
 #import "APAddressBook.h"
 #import "APContact.h"
+#import "DataManager.h"
 
 @interface DMAddDebtViewController ()
 
 @end
 
 @implementation DMAddDebtViewController
+@synthesize debtMode;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadContacts];
     // Do any additional setup after loading the view.
+}
+
+- (void)setDebtMode:(BOOL)aDebtMode
+{
+    if (aDebtMode != debtMode) {
+        debtMode = aDebtMode;
+        
+        if (debtMode) {
+            
+        }
+    }
 }
 
 - (void)loadContacts
@@ -29,12 +44,21 @@
                                     [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES]
                                     ];
     
-    addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName | APContactFieldPhones | APContactFieldEmails | APContactFieldThumbnail;
+    addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName | APContactFieldPhones | APContactFieldEmails | APContactFieldThumbnail | APContactFieldRecordID;
     
     [addressBook loadContacts:^(NSArray *contacts, NSError *error) {
         for (APContact *contact in contacts) {
             NSLog(@"%@ %@.\n%@\n%@", contact.firstName, contact.lastName, contact.phones, contact.emails);
             
+//            if (contact.thumbnail) {
+//                UIImage *image = contact.thumbnail;
+//                NSString *contactId = [NSString stringWithFormat:@"%@", contact.recordID];
+//                
+//                [[DataManager sharedInstance] saveImage:image withId:contactId];
+//                
+//                UIImage *cImage = [[DataManager sharedInstance] imageForID:contactId];
+//                NSLog(@"test");
+//            }
         }
     }];
 

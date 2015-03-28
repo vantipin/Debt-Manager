@@ -18,7 +18,8 @@
 
 +(DataManager *)sharedInstance;
 
-
+- (UIImage *)imageForID:(NSString *)anId;
+- (void)saveImage:(UIImage *)anImage withId:(NSString *)anId;
 
 
 - (NSArray *)fetchRequestForObjectName:(NSString *)objName
