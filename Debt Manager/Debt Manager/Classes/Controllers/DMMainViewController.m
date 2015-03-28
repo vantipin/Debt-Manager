@@ -7,8 +7,6 @@
 //
 
 #import "DMMainViewController.h"
-#import "APAddressBook.h"
-#import "APContact.h"
 
 @interface DMMainViewController ()
 
@@ -19,20 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    APAddressBook *addressBook = [[APAddressBook alloc] init];
-    addressBook.sortDescriptors = @[
-                                    [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES],
-                                    [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES]
-                                    ];
-    
-    addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName | APContactFieldPhones | APContactFieldEmails | APContactFieldThumbnail;
-    
-    [addressBook loadContacts:^(NSArray *contacts, NSError *error) {
-        for (APContact *contact in contacts) {
-            NSLog(@"%@ %@.\n%@\n%@", contact.firstName, contact.lastName, contact.phones, contact.emails);
-        }
-    }];
-    
+        
     // Do any additional setup after loading the view, typically from a nib.
 }
 

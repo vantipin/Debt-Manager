@@ -10,6 +10,9 @@
 
 @interface DMViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) NSString *titleName;
+
 - (IBAction)backPressed:(id)sender;
 
 @end

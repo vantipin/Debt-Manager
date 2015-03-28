@@ -14,6 +14,11 @@
 
 @implementation DMViewController
 
+- (void)setTitleName:(NSString *)titleName
+{
+    [self.titleLabel setText:titleName];
+}
+
 - (void)backPressed:(id)sender
 {
     [[self navigationController] popViewControllerAnimated:YES];
