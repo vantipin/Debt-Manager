@@ -8,6 +8,9 @@
 
 #import "DMViewController.h"
 
-@interface DMSettingsController : DMViewController
+@interface DMSettingsController : DMViewController <UITextFieldDelegate>
+
+@property (nonatomic) IBOutlet UITextField *borrowLimitTextField;
+@property (nonatomic) IBOutlet UITextField *lendLimitTextField;
 
 @end
