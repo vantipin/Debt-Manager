@@ -272,6 +272,7 @@
         
         debt.typeMoneyDebt = [self.currencyButton titleForState:UIControlStateNormal];
         debt.isClosed = @NO;
+        debt.amount = [NSNumber numberWithFloat:[self.amountTextField.text floatValue]];
         
         if (self.selectedContact.thumbnail) {
             debt.imageUrl = stringId;
