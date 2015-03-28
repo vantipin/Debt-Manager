@@ -75,6 +75,7 @@
 		5C5E6D351AC7059B009DC264 /* userAccountPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userAccountPic@2x.png"; sourceTree = "<group>"; };
 		5C5E6D361AC7059B009DC264 /* userPicLargePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPicLargePlaceholder.png; sourceTree = "<group>"; };
 		5C5E6D371AC7059B009DC264 /* userPicLargePlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userPicLargePlaceholder@2x.png"; sourceTree = "<group>"; };
+		5C5E6D3C1AC705E4009DC264 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Debt Manager/Constants.h"; sourceTree = SOURCE_ROOT; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,6 +197,7 @@
 				D5E8FED51AC6EF9C001DA296 /* ThirdParty */,
 				D548A8511AC67962002D7DCB /* AppDelegate.h */,
 				D548A8521AC67962002D7DCB /* AppDelegate.m */,
+				5C5E6D3C1AC705E4009DC264 /* Constants.h */,
 				D548A85A1AC67962002D7DCB /* Main.storyboard */,
 				D548A85D1AC67962002D7DCB /* Images.xcassets */,
 				D548A85F1AC67962002D7DCB /* LaunchScreen.xib */,
