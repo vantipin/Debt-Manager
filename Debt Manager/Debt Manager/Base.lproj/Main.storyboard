@@ -67,7 +67,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZmM-ca-CPa">
-                                                    <rect key="frame" x="561" y="8" width="300" height="30"/>
+                                                    <rect key="frame" x="933" y="8" width="500" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,7 +78,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Feb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vXq-zA-hH2">
-                                                    <rect key="frame" x="800" y="36" width="59" height="22"/>
+                                                    <rect key="frame" x="1374" y="36" width="58" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.81960784310000001" green="0.84705882349999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -304,9 +304,20 @@ You can configure limits via Settings</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="d7m-on-XEp" userLabel="Debt type">
+                                <rect key="frame" x="176" y="131" width="124" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="borrowIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="debtTypePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="7Ff-gs-UlK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Wz-0e-tQ8" userLabel="Currency">
                                 <rect key="frame" x="0.0" y="102" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="$">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,7 +340,7 @@ You can configure limits via Settings</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" minimumFontSize="17" id="eTL-07-HCx" userLabel="amount">
                                 <rect key="frame" x="45" y="102" width="215" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="NHa-R1-0Wa" id="9ZW-HN-NPw"/>
@@ -349,20 +360,10 @@ You can configure limits via Settings</string>
                                 <rect key="frame" x="41" y="155" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="d7m-on-XEp" userLabel="Debt type">
-                                <rect key="frame" x="176" y="155" width="124" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="borrowIcon.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="debtTypePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="7Ff-gs-UlK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zbu-F7-s0H">
                                 <rect key="frame" x="16" y="526" width="294" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Add borrow">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -371,13 +372,13 @@ You can configure limits via Settings</string>
                                     <action selector="addBorrowPressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="PIH-8M-79T"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Debt details" id="paF-5S-hGS" userLabel="description">
-                                <rect key="frame" x="16" y="291.99999762500954" width="294" height="226"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Debt details" textAlignment="center" id="paF-5S-hGS" userLabel="description">
+                                <rect key="frame" x="16" y="291.99999773774732" width="294" height="226"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="NHa-R1-0Wa" id="OSW-L1-NjV"/>
                                 </connections>
@@ -409,6 +410,13 @@ You can configure limits via Settings</string>
                                     <action selector="contactNamePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="kSF-sw-wfZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1O-Hk-z9Q">
+                                <rect key="frame" x="176" y="245" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="1" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -417,6 +425,7 @@ You can configure limits via Settings</string>
                         <outlet property="amountButton" destination="CIi-Oo-vi1" id="tJc-kZ-J1s"/>
                         <outlet property="amountTextField" destination="eTL-07-HCx" id="WQo-bE-aq6"/>
                         <outlet property="borrowTextView" destination="paF-5S-hGS" id="vlS-1d-82Q"/>
+                        <outlet property="borrowTypeLabel" destination="f1O-Hk-z9Q" id="gHS-0E-c5d"/>
                         <outlet property="currencyButton" destination="7Wz-0e-tQ8" id="Hfl-fz-Det"/>
                         <outlet property="dateButton" destination="eiD-T2-UaC" id="BPL-P1-9OH"/>
                         <outlet property="debttypeButton" destination="d7m-on-XEp" id="yt5-y0-Cd3"/>

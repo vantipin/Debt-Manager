@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *borrowTextView;
 @property (weak, nonatomic) IBOutlet UIButton *descrButton;
+@property (weak, nonatomic) IBOutlet UILabel *borrowTypeLabel;
 
 
 @property (nonatomic, assign) BOOL debtMode;

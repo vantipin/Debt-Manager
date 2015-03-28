@@ -90,6 +90,8 @@
         
         [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
         
+        [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
+        
         if (debtMode) {
             
         }
@@ -203,6 +205,7 @@
 - (IBAction)debtTypePressed:(id)sender
 {
     self.debtMode = !debtMode;
+    [self hideControls];
 }
 
 - (IBAction)descrButtonPressed:(id)sender
@@ -234,6 +237,16 @@
     if ([self.amountTextField.text isEqualToString:@""]) {
         [self.amountTextField setText:DefaultAmountText];
     }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self hidePopover];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [self hidePopover];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
