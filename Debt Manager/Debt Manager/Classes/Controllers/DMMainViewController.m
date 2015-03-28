@@ -56,7 +56,7 @@
         NSInteger currentLent     = [[DataManager sharedInstance] amountForType:LEND_TYPE];
         
         self.borrowBalanceLabel.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentBorrowed ,(long)maxBorrowed];
-        self.borrowBalanceLabel.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentLent, (long)maxLent];
+        self.lendBalanceLabel.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentLent, (long)maxLent];
         
         if (currentBorrowed > maxBorrowed) {
             self.borrowBalanceLabel.textColor = [UIColor redColor];
