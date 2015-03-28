@@ -28,8 +28,7 @@
 {
     if ([[segue identifier] isEqualToString:AddDebtSeagueId]) {
         DMAddDebtViewController *addDebtController = [segue destinationViewController];
-        
-        
+        addDebtController.showContactsOnViewWillAppear = YES;
     }
 }
 

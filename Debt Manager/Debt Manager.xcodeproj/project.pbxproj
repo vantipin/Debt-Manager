@@ -46,6 +46,8 @@
 		D5E8FEF61AC6F4F7001DA296 /* DMAddDebtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */; };
 		D5E8FEF91AC72AF0001DA296 /* borrowIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEF71AC72AF0001DA296 /* borrowIcon@2x.png */; };
 		D5E8FEFA1AC72AF0001DA296 /* lendIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEF81AC72AF0001DA296 /* lendIcon@2x.png */; };
+		D5E8FEFD1AC737EB001DA296 /* DMContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */; };
+		D5E8FF001AC73A17001DA296 /* DMContactsPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAddDebtViewController.m; sourceTree = "<group>"; };
 		D5E8FEF71AC72AF0001DA296 /* borrowIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "borrowIcon@2x.png"; sourceTree = "<group>"; };
 		D5E8FEF81AC72AF0001DA296 /* lendIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lendIcon@2x.png"; sourceTree = "<group>"; };
+		D5E8FEFB1AC737EB001DA296 /* DMContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMContactCell.h; sourceTree = "<group>"; };
+		D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMContactCell.m; sourceTree = "<group>"; };
+		D5E8FEFE1AC73A17001DA296 /* DMContactsPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMContactsPopoverController.h; sourceTree = "<group>"; };
+		D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMContactsPopoverController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,8 @@
 				D5E8FEF21AC6F410001DA296 /* DMViewController.m */,
 				D5E8FEF41AC6F4F7001DA296 /* DMAddDebtViewController.h */,
 				D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */,
+				D5E8FEFE1AC73A17001DA296 /* DMContactsPopoverController.h */,
+				D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +305,8 @@
 			children = (
 				D5E8FED31AC6EF9C001DA296 /* DMView.h */,
 				D5E8FED41AC6EF9C001DA296 /* DMView.m */,
+				D5E8FEFB1AC737EB001DA296 /* DMContactCell.h */,
+				D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,8 +468,10 @@
 				D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */,
 				D5E8FEF61AC6F4F7001DA296 /* DMAddDebtViewController.m in Sources */,
 				D548A8501AC67962002D7DCB /* main.m in Sources */,
+				D5E8FF001AC73A17001DA296 /* DMContactsPopoverController.m in Sources */,
 				D5E8FEEB1AC6EF9C001DA296 /* DMView.m in Sources */,
 				D5E8FEF01AC6EF9C001DA296 /* APSocialProfile.m in Sources */,
+				D5E8FEFD1AC737EB001DA296 /* DMContactCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

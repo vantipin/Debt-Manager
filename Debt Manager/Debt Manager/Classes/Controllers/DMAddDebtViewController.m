@@ -7,11 +7,13 @@
 //
 
 #import "DMAddDebtViewController.h"
-#import "APAddressBook.h"
+
 #import "APContact.h"
 #import "DataManager.h"
+#import "DMContactsPopoverController.h"
 
 #define DefaultRecommendedValue @"DefaultRecommendedValue"
+#define ContactPopoverId @"ContactCollectionPopoverID"
 
 #define BorrowColor [UIColor colorWithRed:240. / 255. green:1. blue:240. / 255. alpha:1.]
 #define LendColor [UIColor colorWithRed:1. green:240. / 255. blue:240. / 255. alpha:1.]
@@ -20,16 +22,24 @@
 #define LendType @"lend"
 #define RecommendedFormat @"Your recommended amount to %@ %@%li\nYou can configure limits via Settings"
 
-@interface DMAddDebtViewController ()
+@interface DMAddDebtViewController () <DMContactsDelegate>
+
+@property (nonatomic, assign) BOOL contactsShown;
+@property (nonatomic, strong) DMContactsPopoverController *popoverController;
 
 @end
 
 @implementation DMAddDebtViewController
 @synthesize debtMode;
+@synthesize contactsShown;
+@synthesize popoverController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadContacts];
+    
+//    if (self.showContactsOnViewWillAppear) {
+//        
+//    }
     // Do any additional setup after loading the view.
 }
 
@@ -39,7 +49,7 @@
     
     if (self.showContactsOnViewWillAppear) {
         self.showContactsOnViewWillAppear = NO;
-        [];
+        [self contactNamePressed:nil];
     }
 }
 
@@ -74,33 +84,7 @@
     }
 }
 
-- (void)loadContacts
-{
-    APAddressBook *addressBook = [[APAddressBook alloc] init];
-    addressBook.sortDescriptors = @[
-                                    [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES],
-                                    [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES]
-                                    ];
-    
-    addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName | APContactFieldPhones | APContactFieldEmails | APContactFieldThumbnail | APContactFieldRecordID;
-    
-    [addressBook loadContacts:^(NSArray *contacts, NSError *error) {
-        for (APContact *contact in contacts) {
-//            NSLog(@"%@ %@.\n%@\n%@", contact.firstName, contact.lastName, contact.phones, contact.emails);
-//            
-            if (contact.thumbnail) {
-//                UIImage *image = contact.thumbnail;
-//                NSString *contactId = [NSString stringWithFormat:@"%@", contact.recordID];
-//                
-//                [[DataManager sharedInstance] saveImage:image withId:contactId];
-//                
-//                UIImage *cImage = [[DataManager sharedInstance] imageForID:contactId];
-//                NSLog(@"test");
-            }
-        }
-    }];
 
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -129,7 +113,68 @@
 
 - (IBAction)contactNamePressed:(id)sender
 {
+    if (!self.contactsShown) {
+        self.contactsShown = YES;
+        popoverController = [self.storyboard instantiateViewControllerWithIdentifier:ContactPopoverId];
+        popoverController.contactDelegate = self;
+        
+        CGRect startFrame = popoverController.view.frame;
+        startFrame.size.height = 276.;
+        startFrame.origin.y = self.view.frame.size.height;
+        CGRect finalFrame = startFrame;
+        finalFrame.origin.y -= finalFrame.size.height;
+        popoverController.view.frame = startFrame;
+        [self.view addSubview:popoverController.view];
+        
+        [UIView animateWithDuration:sender ? 0.3 : 0. animations:^{
+            [popoverController.view setFrame:finalFrame];
+        }];
+    } else {
+        [self addPhoto];
+    }
+}
+
+- (void)addPhoto
+{
     
+}
+
+#pragma mark - Contact delegate methods
+
+- (void)hidePopover
+{
+    self.contactsShown = NO;
+    
+    CGRect finalFrame = popoverController.view.frame;
+    finalFrame.origin.y = self.view.frame.size.height;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [popoverController.view setFrame:finalFrame];
+    } completion:^(BOOL finished) {
+        [self.popoverController.view removeFromSuperview];
+        self.popoverController = nil;
+    }];
+}
+
+- (void)donePressedForContacts
+{
+    [self hidePopover];
+}
+
+- (void)contactSelected:(APContact *)contact
+{
+    NSString *firstName = contact.firstName && [contact.firstName class] != [NSNull class] ? contact.firstName : @"";
+    NSString *lastName = contact.lastName && [contact.lastName class] != [NSNull class] ? contact.lastName : @"";
+    
+    [self.nameLabel setText:[NSString stringWithFormat:@"%@%@", (firstName.length ? [NSString stringWithFormat:@"%@ ", firstName] : @""), lastName]];
+    
+    if (contact.thumbnail) {
+        [self.userPicImageView setImage:contact.thumbnail];
+    } else {
+        [self.userPicImageView setImage:[UIImage imageNamed:@"userPicLargePlaceholder.png"]];
+    }
+    
+    [self hidePopover];
 }
 
 - (IBAction)addBorrowPressed:(id)sender
