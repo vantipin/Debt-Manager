@@ -13,6 +13,7 @@
 
 @property (nonatomic) IBOutlet UIImageView *image;
 @property (nonatomic) IBOutlet UIImageView *debtTypeImage;
+@property (nonatomic) IBOutlet UILabel *debtTypeLabel;
 @property (nonatomic) IBOutlet UILabel *userNameLabel;
 @property (nonatomic) IBOutlet UILabel *debtDateLabel;
 @property (nonatomic) IBOutlet UILabel *debtAmountLabel;
@@ -42,6 +43,7 @@
         self.debtAmountLabel.text = [NSString stringWithFormat:@"%@ %@",debt.typeMoneyDebt, debt.amount];
         
         self.debtTypeImage.image = [[DataManager sharedInstance] imageForType:debt.typeDebt.intValue];
+        self.debtTypeLabel.text = [[DataManager sharedInstance] textForType:debt.typeDebt.intValue];
         
         [self setUserImageWithURL:debt.user.imageUrl];
         

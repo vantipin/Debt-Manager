@@ -54,12 +54,11 @@
                                                     <rect key="frame" x="8" y="8" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="O0t-Rv-hP6">
-                                                    <rect key="frame" x="66" y="38" width="41" height="20"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="borrowIcon.png" id="O0t-Rv-hP6">
+                                                    <rect key="frame" x="66" y="38" width="31" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.84434263418719691" green="0.99087474004753417" blue="0.83878110836713438" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name_Name_Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2fB-EV-DMu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yakubovick Sergey Olegovich" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2fB-EV-DMu">
                                                     <rect key="frame" x="66" y="8" width="115" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
@@ -84,6 +83,13 @@
                                                     <color key="textColor" red="0.81960784310000001" green="0.84705882349999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borrowed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TP3-iB-QkZ">
+                                                    <rect key="frame" x="102" y="43" width="46" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -91,6 +97,7 @@
                                             <outlet property="debtAmountLabel" destination="ZmM-ca-CPa" id="0Jf-jy-3MX"/>
                                             <outlet property="debtDateLabel" destination="vXq-zA-hH2" id="O3Q-Vc-VpJ"/>
                                             <outlet property="debtTypeImage" destination="O0t-Rv-hP6" id="3FP-U8-IwT"/>
+                                            <outlet property="debtTypeLabel" destination="TP3-iB-QkZ" id="p45-bb-YuI"/>
                                             <outlet property="image" destination="3MQ-3P-yjc" id="Mbq-3Y-CuA"/>
                                             <outlet property="userNameLabel" destination="2fB-EV-DMu" id="1vY-ur-ewN"/>
                                         </connections>
