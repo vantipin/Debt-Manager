@@ -14,6 +14,8 @@
 
 #define DefaultRecommendedValue @"DefaultRecommendedValue"
 #define ContactPopoverId @"ContactCollectionPopoverID"
+#define DefaultDebtDetailsText @"Debt details"
+#define DefaultAmountText @"100"
 
 #define BorrowColor [UIColor colorWithRed:240. / 255. green:1. blue:240. / 255. alpha:1.]
 #define LendColor [UIColor colorWithRed:1. green:240. / 255. blue:240. / 255. alpha:1.]
@@ -22,7 +24,7 @@
 #define LendType @"lend"
 #define RecommendedFormat @"Your recommended amount to %@ %@%li\nYou can configure limits via Settings"
 
-@interface DMAddDebtViewController () <DMContactsDelegate>
+@interface DMAddDebtViewController () <DMContactsDelegate, UITextFieldDelegate, UITextViewDelegate>
 
 @property (nonatomic, assign) BOOL contactsShown;
 @property (nonatomic, strong) DMContactsPopoverController *popoverController;
@@ -36,11 +38,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    NSLocale* locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [dateFormatter setLocale:locale];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateFormat:@"dd MMM"];
     
-//    if (self.showContactsOnViewWillAppear) {
-//        
-//    }
-    // Do any additional setup after loading the view.
+    [self.dateButton setTitle:[dateFormatter stringFromDate:date] forState:UIControlStateNormal];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    
+    [self hideControls];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -59,7 +71,7 @@
     [self.borrowTextView resignFirstResponder];
     [self.amountTextField resignFirstResponder];
     
-    
+    [self hidePopover];
 }
 
 - (void)setDebtMode:(BOOL)aDebtMode
@@ -114,6 +126,10 @@
 - (IBAction)contactNamePressed:(id)sender
 {
     if (!self.contactsShown) {
+        [self.view endEditing:YES];
+        [self.borrowTextView resignFirstResponder];
+        [self.amountTextField resignFirstResponder];
+        
         self.contactsShown = YES;
         popoverController = [self.storyboard instantiateViewControllerWithIdentifier:ContactPopoverId];
         popoverController.contactDelegate = self;
@@ -143,17 +159,19 @@
 
 - (void)hidePopover
 {
-    self.contactsShown = NO;
-    
-    CGRect finalFrame = popoverController.view.frame;
-    finalFrame.origin.y = self.view.frame.size.height;
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        [popoverController.view setFrame:finalFrame];
-    } completion:^(BOOL finished) {
-        [self.popoverController.view removeFromSuperview];
-        self.popoverController = nil;
-    }];
+    if (self.contactsShown) {
+        self.contactsShown = NO;
+        
+        CGRect finalFrame = popoverController.view.frame;
+        finalFrame.origin.y = self.view.frame.size.height;
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            [popoverController.view setFrame:finalFrame];
+        } completion:^(BOOL finished) {
+            [self.popoverController.view removeFromSuperview];
+            self.popoverController = nil;
+        }];
+    }
 }
 
 - (void)donePressedForContacts
@@ -185,6 +203,63 @@
 - (IBAction)debtTypePressed:(id)sender
 {
     self.debtMode = !debtMode;
+}
+
+- (IBAction)descrButtonPressed:(id)sender
+{
+    [sender setHidden:YES];
+    
+    if ([self.borrowTextView.text isEqualToString:DefaultDebtDetailsText]) {
+        [self.borrowTextView setText:@""];
+    }
+    
+    [self.borrowTextView becomeFirstResponder];
+}
+
+- (IBAction)amountButtonPressed:(id)sender
+{
+    [sender setHidden:YES];
+    
+    if ([self.amountTextField.text isEqualToString:DefaultAmountText]) {
+        [self.amountTextField setText:@""];
+    }
+    
+    [self.amountTextField becomeFirstResponder];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.amountButton setHidden:NO];
+    
+    if ([self.amountTextField.text isEqualToString:@""]) {
+        [self.amountTextField setText:DefaultAmountText];
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self.descrButton setHidden:NO];
+    
+    if ([self.borrowTextView.text isEqualToString:@""]) {
+        [self.borrowTextView setText:DefaultDebtDetailsText];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
