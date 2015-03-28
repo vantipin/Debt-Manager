@@ -85,10 +85,10 @@ static DataManager *instance = nil;
 - (UIImage *)imageForType:(DebtType)type;
 {
     if (type == BORROW_TYPE) {
-        return [UIImage imageNamed:@""];
+        return [UIImage imageNamed:@"borrowIcon.png"];
     }
     else if (type == LEND_TYPE) {
-        return [UIImage imageNamed:@""];
+        return [UIImage imageNamed:@"lendIcon.png"];
     }
     else {
         return nil;
