@@ -17,10 +17,11 @@
 		D5090F581AC6E26F00831399 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F501AC6E26F00831399 /* APContact.m */; };
 		D5090F591AC6E26F00831399 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F521AC6E26F00831399 /* APPhoneWithLabel.m */; };
 		D5090F5A1AC6E26F00831399 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F541AC6E26F00831399 /* APSocialProfile.m */; };
+		D5090F5D1AC6E3DD00831399 /* DMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */; };
+		D5090F601AC6E4DE00831399 /* DMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5090F5F1AC6E4DE00831399 /* DMView.m */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
-		D548A8591AC67962002D7DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8581AC67962002D7DCB /* ViewController.m */; };
 		D548A85C1AC67962002D7DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D548A85A1AC67962002D7DCB /* Main.storyboard */; };
 		D548A85E1AC67962002D7DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D548A85D1AC67962002D7DCB /* Images.xcassets */; };
 		D548A8611AC67962002D7DCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D548A85F1AC67962002D7DCB /* LaunchScreen.xib */; };
@@ -54,14 +55,16 @@
 		D5090F531AC6E26F00831399 /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
 		D5090F541AC6E26F00831399 /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
 		D5090F551AC6E26F00831399 /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
+		D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMainViewController.m; sourceTree = "<group>"; };
+		D5090F5C1AC6E3DD00831399 /* DMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMainViewController.h; sourceTree = "<group>"; };
+		D5090F5E1AC6E4DE00831399 /* DMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMView.h; sourceTree = "<group>"; };
+		D5090F5F1AC6E4DE00831399 /* DMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMView.m; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D548A8511AC67962002D7DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D548A8521AC67962002D7DCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D548A8551AC67962002D7DCB /* Debt_Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Debt_Manager.xcdatamodel; sourceTree = "<group>"; };
-		D548A8571AC67962002D7DCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D548A8581AC67962002D7DCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D548A85B1AC67962002D7DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D548A85D1AC67962002D7DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D548A8601AC67962002D7DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 		D5090F471AC6D70600831399 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5090F5C1AC6E3DD00831399 /* DMMainViewController.h */,
+				D5090F5B1AC6E3DD00831399 /* DMMainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +129,8 @@
 		D5090F481AC6D70600831399 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5090F5E1AC6E4DE00831399 /* DMView.h */,
+				D5090F5F1AC6E4DE00831399 /* DMView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,18 +182,16 @@
 		D548A84C1AC67962002D7DCB /* Debt Manager */ = {
 			isa = PBXGroup;
 			children = (
-				D5090F491AC6E26F00831399 /* ThirdParty */,
 				D5090F461AC6D70600831399 /* Classes */,
 				D548A8511AC67962002D7DCB /* AppDelegate.h */,
 				D548A8521AC67962002D7DCB /* AppDelegate.m */,
-				D548A8571AC67962002D7DCB /* ViewController.h */,
-				D548A8581AC67962002D7DCB /* ViewController.m */,
 				D548A85A1AC67962002D7DCB /* Main.storyboard */,
 				D548A85D1AC67962002D7DCB /* Images.xcassets */,
 				D548A85F1AC67962002D7DCB /* LaunchScreen.xib */,
 				D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */,
-				D5090F451AC6D6C100831399 /* Frameworks */,
+				D5090F491AC6E26F00831399 /* ThirdParty */,
 				D548A84D1AC67962002D7DCB /* Supporting Files */,
+				D5090F451AC6D6C100831399 /* Frameworks */,
 			);
 			path = "Debt Manager";
 			sourceTree = "<group>";
@@ -317,15 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5090F5D1AC6E3DD00831399 /* DMMainViewController.m in Sources */,
 				D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */,
 				D5090F561AC6E26F00831399 /* APAddress.m in Sources */,
 				D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */,
 				D5090F5A1AC6E26F00831399 /* APSocialProfile.m in Sources */,
-				D548A8591AC67962002D7DCB /* ViewController.m in Sources */,
 				D5090F591AC6E26F00831399 /* APPhoneWithLabel.m in Sources */,
 				D5090F571AC6E26F00831399 /* APAddressBook.m in Sources */,
 				D548A8501AC67962002D7DCB /* main.m in Sources */,
 				D5090F581AC6E26F00831399 /* APContact.m in Sources */,
+				D5090F601AC6E4DE00831399 /* DMView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 DM. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DMMainViewController.h"
 
-@interface ViewController ()
+@interface DMMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DMMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
