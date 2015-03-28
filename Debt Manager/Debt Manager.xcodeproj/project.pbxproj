@@ -60,6 +60,7 @@
 		D5E8FEFA1AC72AF0001DA296 /* lendIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E8FEF81AC72AF0001DA296 /* lendIcon@2x.png */; };
 		D5E8FEFD1AC737EB001DA296 /* DMContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */; };
 		D5E8FF001AC73A17001DA296 /* DMContactsPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */; };
+		D5E8FF041AC769A3001DA296 /* NSManagedObject+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FF031AC769A3001DA296 /* NSManagedObject+Queries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,8 @@
 		D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMContactCell.m; sourceTree = "<group>"; };
 		D5E8FEFE1AC73A17001DA296 /* DMContactsPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMContactsPopoverController.h; sourceTree = "<group>"; };
 		D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMContactsPopoverController.m; sourceTree = "<group>"; };
+		D5E8FF021AC769A3001DA296 /* NSManagedObject+Queries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Queries.h"; sourceTree = "<group>"; };
+		D5E8FF031AC769A3001DA296 /* NSManagedObject+Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Queries.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 		5C5E6D291AC6FB78009DC264 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D5E8FF011AC769A3001DA296 /* NSManagedObject */,
 				5C5E6D451AC7347B009DC264 /* User.h */,
 				5C5E6D461AC7347B009DC264 /* User.m */,
 				5C5E6D421AC7347A009DC264 /* Debt.h */,
@@ -377,6 +381,15 @@
 			path = APAddressBook;
 			sourceTree = "<group>";
 		};
+		D5E8FF011AC769A3001DA296 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8FF021AC769A3001DA296 /* NSManagedObject+Queries.h */,
+				D5E8FF031AC769A3001DA296 /* NSManagedObject+Queries.m */,
+			);
+			path = NSManagedObject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,6 +518,7 @@
 			files = (
 				5C5E6D231AC6FA09009DC264 /* NSStringAdditions.m in Sources */,
 				D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */,
+				D5E8FF041AC769A3001DA296 /* NSManagedObject+Queries.m in Sources */,
 				5C5E6D471AC7347B009DC264 /* User.m in Sources */,
 				5C5E6D4A1AC747D0009DC264 /* DMSettingsController.m in Sources */,
 				5C5E6D1C1AC6F7A0009DC264 /* DataManager.m in Sources */,

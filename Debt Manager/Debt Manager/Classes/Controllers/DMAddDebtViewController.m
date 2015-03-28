@@ -7,6 +7,9 @@
 //
 
 #import "DMAddDebtViewController.h"
+#import "NSManagedObject+Queries.h"
+#import "User.h"
+#import "Debt.h"
 
 #import "APContact.h"
 #import "DataManager.h"
@@ -39,7 +42,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    debtMode = YES;
+    
+    if (self.showContactsOnViewWillAppear) {
+        debtMode = YES;
+        
+        for (UIButton *button in self.addDebtButtons) {
+            [button setEnabled:YES];
+        }
+    }
     
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -77,9 +87,9 @@
     [self hidePopover];
 }
 
-- (void)setDebtMode:(BOOL)aDebtMode
+- (void)setDebtMode:(BOOL)aDebtMode force:(BOOL)aForce
 {
-    if (aDebtMode != debtMode) {
+    if (aDebtMode != debtMode || aForce) {
         debtMode = aDebtMode;
         
         NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -104,6 +114,11 @@
             
         }
     }
+}
+
+- (void)setDebtMode:(BOOL)aDebtMode
+{
+    [self setDebtMode:aDebtMode force:NO];
 }
 
 
@@ -203,11 +218,69 @@
     }
     
     [self hidePopover];
+    
+    for (UIButton *button in self.addDebtButtons) {
+        [button setEnabled:YES];
+    }
+    
+    self.selectedContact = contact;
 }
 
 - (IBAction)addBorrowPressed:(id)sender
 {
-    
+    if (self.nameLabel.text.length > 0 && self.selectedContact) {
+        NSString *stringId = [NSString stringWithFormat:@"%@", self.selectedContact.recordID];
+        
+        if (self.selectedContact.thumbnail) {
+            [DataManager saveImage:self.selectedContact.thumbnail withId:stringId];
+        }
+        
+        NSArray *users = [User fetchObjectWithParameters:@{@"idUser" : stringId}];
+        User *user = nil;
+        
+        if (users.count > 0) {
+            user = [users lastObject];
+        } else {
+            user = [User object];
+            user.idUser = stringId;
+        }
+        
+        user.name = self.nameLabel.text;
+        user.typeAccount = [NSNumber numberWithInteger:CONTACTS_TYPE];
+        
+        if (self.selectedContact.emails.count > 0) {
+            user.email = [self.selectedContact.emails firstObject];
+        }
+        
+        if (self.selectedContact.phones.count > 0) {
+            user.phoneNumber = [self.selectedContact.phones firstObject];
+        }
+        
+        if (self.selectedContact.thumbnail) {
+            user.imageUrl = stringId;
+        }
+        
+        Debt *debt = [Debt object];
+        [user addDebtObject:debt];
+        debt.user = user;
+        
+        debt.date = [NSDate date];
+        
+        if (![self.borrowTextView.text isEqualToString:DefaultDebtDetailsText]) {
+            debt.descriptionDebt = self.borrowTextView.text;
+        }
+        
+        debt.typeMoneyDebt = [self.currencyButton titleForState:UIControlStateNormal];
+        debt.isClosed = @NO;
+        
+        if (self.selectedContact.thumbnail) {
+            debt.imageUrl = stringId;
+        }
+        
+        debt.typeDebt = [NSNumber numberWithInteger:debtMode ? BORROW_TYPE : LEND_TYPE];
+        
+        [[DataManager sharedInstance] save];
+    }
 }
 
 - (IBAction)debtTypePressed:(id)sender
