@@ -11,6 +11,7 @@
 #import "MainContextObject.h"
 #import "Debt.h"
 #import "User.h"
+#import "Constants.h"
 
 @interface DataManager : NSManagedObject
 
@@ -18,9 +19,14 @@
 
 +(DataManager *)sharedInstance;
 
-- (UIImage *)imageForID:(NSString *)anId;
-- (void)saveImage:(UIImage *)anImage withId:(NSString *)anId;
++ (UIImage *)imageForID:(NSString *)anId;
++ (void)saveImage:(UIImage *)anImage withId:(NSString *)anId;
 
+
+- (NSArray *)fetchDebtsSortingBy:(SortingType)type;
+- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType;
+
+- (UIImage *)imageForType:(DebtType)type;
 
 - (NSArray *)fetchRequestForObjectName:(NSString *)objName
                          withPredicate:(NSPredicate *)predicate;

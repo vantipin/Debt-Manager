@@ -7,9 +7,11 @@
 //
 
 #import "DMViewController.h"
+#import "Debt.h"
 
 @interface DMAddDebtViewController : DMViewController
 
+@property (nonatomic) Debt *debt;
 @property (weak, nonatomic) IBOutlet UILabel *recommendedLabel;
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UITextField *amountTextField;
