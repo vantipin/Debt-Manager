@@ -22,9 +22,13 @@
 + (UIImage *)imageForID:(NSString *)anId;
 + (void)saveImage:(UIImage *)anImage withId:(NSString *)anId;
 
+- (void)setValue:(NSNumber *)number forKey:(NSString *)key;
+- (NSNumber *)valueForKey:(NSString *)key;
+
+- (NSInteger)amountForType:(DebtType)type;
 
 - (NSArray *)fetchDebtsSortingBy:(SortingType)type;
-- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType;
+- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType isActive:(BOOL)isActive;
 
 - (UIImage *)imageForType:(DebtType)type;
 

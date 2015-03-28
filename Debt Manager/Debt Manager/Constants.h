@@ -5,6 +5,8 @@
 //  Created by Vlad Antipin on 3/28/15.
 //  Copyright (c) 2015 DM. All rights reserved.
 
+#define DefaultRecommendedValueBorrow @"DefaultRecommendedValueBorrow"
+#define DefaultRecommendedValueLend   @"DefaultRecommendedValueLend"
 
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
 

@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
-#define DefaultRecommendedValueBorrow @"DefaultRecommendedValueBorrow"
-#define DefaultRecommendedValueLend   @"DefaultRecommendedValueLend"
+#import "Constants.h"
+#import "DataManager.h"
 
 @interface AppDelegate ()
 
@@ -22,14 +21,6 @@
     // Override point for customization after application launch.
     
     //NSLog(@"%@", [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol]);
-    
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    id objectForKey = [standardUserDefaults objectForKey:DefaultRecommendedValueBorrow];
-    
-    if (!objectForKey) {
-        [standardUserDefaults setObject:@(300) forKey:DefaultRecommendedValueBorrow];
-        [standardUserDefaults synchronize];
-    }
     
     return YES;
 }

@@ -40,19 +40,30 @@ static DataManager *instance = nil;
     return _context;
 }
 
-- (NSArray *)fetchDebtsSortingBy:(SortingType)type
+- (NSInteger)amountForType:(DebtType)type
 {
-    return [self fetchDebtsWithType:ANY_TYPE sortingBy:type];
+    NSArray *debts = [self fetchDebtsWithType:type sortingBy:DATE_TYPE isActive:YES];
+    NSInteger summ = 0;
+    for (Debt *debt in debts) {
+        summ += debt.amount.integerValue;
+    }
+    
+    return summ;
 }
 
-- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType;
+- (NSArray *)fetchDebtsSortingBy:(SortingType)type
+{
+    return [self fetchDebtsWithType:ANY_TYPE sortingBy:type isActive:YES];
+}
+
+- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType isActive:(BOOL)isActive;
 {
     NSPredicate *predicate;
     if (debtType == BORROW_TYPE || debtType == LEND_TYPE) {
-        predicate = [NSPredicate predicateWithFormat:@"type == %d",debtType];
+        predicate = [NSPredicate predicateWithFormat:@"type == %d && isClosed != %d",debtType ,isActive];
     }
     else {
-        predicate = nil;
+        predicate = [NSPredicate predicateWithFormat:@"isClosed != %d" ,isActive];
     }
     
     NSString *sortingKey;
@@ -128,6 +139,27 @@ static DataManager *instance = nil;
     }
 }
 
+
+- (void)setValue:(NSNumber *)number forKey:(NSString *)key
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [standardUserDefaults setObject:number forKey:key];
+    [standardUserDefaults synchronize];
+}
+
+- (NSNumber *)valueForKey:(NSString *)key
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    id objectForKey = [standardUserDefaults objectForKey:key];
+    
+    if (!objectForKey) {
+        objectForKey = @(300);
+        [[DataManager sharedInstance] setValue:objectForKey forKey:key];
+    }
+    
+    return objectForKey;
+}
 
 
 - (NSArray *)fetchRequestForObjectName:(NSString *)objName
