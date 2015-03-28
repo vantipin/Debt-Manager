@@ -7,8 +7,17 @@
 //
 
 #import "DMMainViewController.h"
+#import "DMAddDebtViewController.h"
+#import "DataManager.h"
+#import "DebtCell.h"
+#import "User.h"
 
 @interface DMMainViewController ()
+{
+    SortingType sortingType;
+}
+
+@property (nonatomic) NSArray * dataSourceDebts;
 
 @end
 
@@ -17,13 +26,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    sortingType = DATE_TYPE;
+        // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.dataSourceDebts = [[DataManager sharedInstance] fetchDebtsSortingBy:sortingType];
+    [self.tableView reloadData];
+    if (!self.dataSourceDebts.count) {
+        self.splashScreen.hidden = NO;
+        self.tableView.hidden = YES;
+        self.balanceView.hidden = YES;
+    }
+    else {
+        self.splashScreen.hidden = YES;
+        self.tableView.hidden = NO;
+        self.balanceView.hidden = NO;
         
-    // Do any additional setup after loading the view, typically from a nib.
+        //configure balance view
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - table view delegates
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSourceDebts.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DebtCell *cell = [tableView dequeueReusableCellWithIdentifier:@"debtCellId" forIndexPath:indexPath];
+    
+    cell.debt = self.dataSourceDebts[indexPath.row];
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row < self.dataSourceDebts.count) {
+        Debt *debt = self.dataSourceDebts[indexPath.row];
+        [self performSegueWithIdentifier:@"FromMainToDebtDetail" sender:debt];
+    }
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *controller = segue.destinationViewController;
+    if ([controller isKindOfClass:[DMAddDebtViewController class]]) {
+        if (sender && [sender isKindOfClass:[Debt class]]) {
+            ((DMAddDebtViewController *)controller).debt = sender;
+        }
+    }
 }
 
 @end

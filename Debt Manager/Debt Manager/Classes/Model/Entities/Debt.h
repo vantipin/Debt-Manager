@@ -21,14 +21,6 @@
 @property (nonatomic, retain) NSString * typeMoneyDebt;
 @property (nonatomic, retain) NSString * imageUrl;
 @property (nonatomic, retain) NSNumber * isClosed;
-@property (nonatomic, retain) NSSet *user;
-@end
-
-@interface Debt (CoreDataGeneratedAccessors)
-
-- (void)addUserObject:(User *)value;
-- (void)removeUserObject:(User *)value;
-- (void)addUser:(NSSet *)values;
-- (void)removeUser:(NSSet *)values;
+@property (nonatomic, retain) User *user;
 
 @end

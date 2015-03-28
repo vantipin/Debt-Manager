@@ -82,7 +82,7 @@ static MainContextObject *instance = nil;
 {
     NSManagedObjectModel *managedObjectModel;
     
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Debt_Manager" withExtension:@"momd"];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return managedObjectModel;
 }
@@ -91,7 +91,7 @@ static MainContextObject *instance = nil;
 {
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     
-    NSURL *storeURL = [[MainContextObject applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
+    NSURL *storeURL = [[MainContextObject applicationDocumentsDirectory] URLByAppendingPathComponent:@"Debt_Manager.sqlite"];
     
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];

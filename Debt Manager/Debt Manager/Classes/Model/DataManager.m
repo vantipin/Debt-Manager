@@ -40,7 +40,63 @@ static DataManager *instance = nil;
     return _context;
 }
 
-- (UIImage *)imageForID:(NSString *)anId
+- (NSArray *)fetchDebtsSortingBy:(SortingType)type
+{
+    return [self fetchDebtsWithType:ANY_TYPE sortingBy:type];
+}
+
+- (NSArray *)fetchDebtsWithType:(DebtType)debtType sortingBy:(SortingType)sortingType;
+{
+    NSPredicate *predicate;
+    if (debtType == BORROW_TYPE || debtType == LEND_TYPE) {
+        predicate = [NSPredicate predicateWithFormat:@"type == %d",debtType];
+    }
+    else {
+        predicate = nil;
+    }
+    
+    NSString *sortingKey;
+    switch (sortingType) {
+        case 0: {
+            sortingKey = @"date";
+            break;
+        }
+        case 1: {
+            sortingKey = @"user.name";
+            break;
+        }
+        case 2: {
+            sortingKey = @"amount";
+            break;
+        }
+            
+        default: {
+            sortingKey = @"date";
+            break;
+        }
+    }
+    
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:sortingKey ascending:NO];
+    NSArray *result = [self fetchRequestForObjectName:@"Debt" withPredicate:predicate andSortDescriptor:@[descriptor]];
+    
+    return result;
+}
+
+- (UIImage *)imageForType:(DebtType)type;
+{
+    if (type == BORROW_TYPE) {
+        return [UIImage imageNamed:@""];
+    }
+    else if (type == LEND_TYPE) {
+        return [UIImage imageNamed:@""];
+    }
+    else {
+        return nil;
+    }
+}
+
+
++ (UIImage *)imageForID:(NSString *)anId
 {
     if (anId) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
@@ -56,7 +112,7 @@ static DataManager *instance = nil;
     return nil;
 }
 
-- (void)saveImage:(UIImage *)anImage withId:(NSString *)anId
++ (void)saveImage:(UIImage *)anImage withId:(NSString *)anId
 {
     if (anImage && anId) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);

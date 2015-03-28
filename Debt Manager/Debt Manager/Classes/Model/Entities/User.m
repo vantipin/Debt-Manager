@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+#import "Debt.h"
 
 
 @implementation User

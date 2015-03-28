@@ -7,9 +7,11 @@
 //
 
 #import "DMViewController.h"
+#import "Debt.h"
 
 @interface DMAddDebtViewController : DMViewController
 
+@property (nonatomic) Debt *debt;
 @property (nonatomic, assign) BOOL debtMode;
 
 @end

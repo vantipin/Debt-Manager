@@ -10,7 +10,8 @@
 
 typedef enum {
     BORROW_TYPE = 0,
-    LEND_TYPE = 1
+    LEND_TYPE = 1,
+    ANY_TYPE = 2
 } DebtType;
 
 typedef enum {
@@ -18,3 +19,9 @@ typedef enum {
     FACEBOOK_TYPE = 1,
     TWITTER_TYPE = 2
 } AccountType;
+
+typedef enum {
+    DATE_TYPE = 0,
+    USERNAME_TYPE = 1,
+    DEBT_AMOUNT_TYPE = 2
+} SortingType;

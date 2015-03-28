@@ -8,8 +8,15 @@
 
 #import "DMViewController.h"
 
-@interface DMMainViewController : DMViewController
+@interface DMMainViewController : DMViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) IBOutlet UIView *balanceView;
+@property (nonatomic) IBOutlet UIView *borrowView;
+@property (nonatomic) IBOutlet UIView *lendView;
+@property (nonatomic) IBOutlet UILabel *borrowBalanceLabel;
+@property (nonatomic) IBOutlet UILabel *lendBalanceLabel;
+@property (nonatomic) IBOutlet UIView *splashScreen;
 
 @end
 

@@ -14,12 +14,14 @@
 		5C5E6D231AC6FA09009DC264 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D221AC6FA09009DC264 /* NSStringAdditions.m */; };
 		5C5E6D251AC6FA9B009DC264 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */; };
 		5C5E6D271AC6FACD009DC264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5E6D261AC6FACD009DC264 /* Foundation.framework */; };
-		5C5E6D2C1AC6FB9E009DC264 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D2B1AC6FB9E009DC264 /* User.m */; };
-		5C5E6D2F1AC6FB9F009DC264 /* Debt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D2E1AC6FB9F009DC264 /* Debt.m */; };
 		5C5E6D381AC7059B009DC264 /* userAccountPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D341AC7059B009DC264 /* userAccountPic.png */; };
 		5C5E6D391AC7059B009DC264 /* userAccountPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D351AC7059B009DC264 /* userAccountPic@2x.png */; };
 		5C5E6D3A1AC7059B009DC264 /* userPicLargePlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D361AC7059B009DC264 /* userPicLargePlaceholder.png */; };
 		5C5E6D3B1AC7059B009DC264 /* userPicLargePlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D371AC7059B009DC264 /* userPicLargePlaceholder@2x.png */; };
+		5C5E6D411AC72D4D009DC264 /* DebtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D401AC72D4D009DC264 /* DebtCell.m */; };
+		5C5E6D441AC7347A009DC264 /* Debt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D431AC7347A009DC264 /* Debt.m */; };
+		5C5E6D471AC7347B009DC264 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D461AC7347B009DC264 /* User.m */; };
+		5C5E6D4A1AC747D0009DC264 /* DMSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E6D491AC747D0009DC264 /* DMSettingsController.m */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
@@ -67,15 +69,19 @@
 		5C5E6D221AC6FA09009DC264 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
 		5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5C5E6D261AC6FACD009DC264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5C5E6D2A1AC6FB9E009DC264 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		5C5E6D2B1AC6FB9E009DC264 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		5C5E6D2D1AC6FB9F009DC264 /* Debt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debt.h; sourceTree = "<group>"; };
-		5C5E6D2E1AC6FB9F009DC264 /* Debt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debt.m; sourceTree = "<group>"; };
 		5C5E6D341AC7059B009DC264 /* userAccountPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userAccountPic.png; sourceTree = "<group>"; };
 		5C5E6D351AC7059B009DC264 /* userAccountPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userAccountPic@2x.png"; sourceTree = "<group>"; };
 		5C5E6D361AC7059B009DC264 /* userPicLargePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPicLargePlaceholder.png; sourceTree = "<group>"; };
 		5C5E6D371AC7059B009DC264 /* userPicLargePlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userPicLargePlaceholder@2x.png"; sourceTree = "<group>"; };
 		5C5E6D3C1AC705E4009DC264 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Debt Manager/Constants.h"; sourceTree = SOURCE_ROOT; };
+		5C5E6D3F1AC72D4D009DC264 /* DebtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtCell.h; sourceTree = "<group>"; };
+		5C5E6D401AC72D4D009DC264 /* DebtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtCell.m; sourceTree = "<group>"; };
+		5C5E6D421AC7347A009DC264 /* Debt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debt.h; sourceTree = "<group>"; };
+		5C5E6D431AC7347A009DC264 /* Debt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debt.m; sourceTree = "<group>"; };
+		5C5E6D451AC7347B009DC264 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5C5E6D461AC7347B009DC264 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5C5E6D481AC747D0009DC264 /* DMSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingsController.h; sourceTree = "<group>"; };
+		5C5E6D491AC747D0009DC264 /* DMSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingsController.m; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -164,10 +170,10 @@
 		5C5E6D291AC6FB78009DC264 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				5C5E6D2D1AC6FB9F009DC264 /* Debt.h */,
-				5C5E6D2E1AC6FB9F009DC264 /* Debt.m */,
-				5C5E6D2A1AC6FB9E009DC264 /* User.h */,
-				5C5E6D2B1AC6FB9E009DC264 /* User.m */,
+				5C5E6D451AC7347B009DC264 /* User.h */,
+				5C5E6D461AC7347B009DC264 /* User.m */,
+				5C5E6D421AC7347A009DC264 /* Debt.h */,
+				5C5E6D431AC7347A009DC264 /* Debt.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -276,12 +282,14 @@
 		D5E8FECF1AC6EF9C001DA296 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5E8FED01AC6EF9C001DA296 /* DMMainViewController.h */,
-				D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */,
 				D5E8FEF11AC6F410001DA296 /* DMViewController.h */,
 				D5E8FEF21AC6F410001DA296 /* DMViewController.m */,
+				D5E8FED01AC6EF9C001DA296 /* DMMainViewController.h */,
+				D5E8FED11AC6EF9C001DA296 /* DMMainViewController.m */,
 				D5E8FEF41AC6F4F7001DA296 /* DMAddDebtViewController.h */,
 				D5E8FEF51AC6F4F7001DA296 /* DMAddDebtViewController.m */,
+				5C5E6D481AC747D0009DC264 /* DMSettingsController.h */,
+				5C5E6D491AC747D0009DC264 /* DMSettingsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +299,8 @@
 			children = (
 				D5E8FED31AC6EF9C001DA296 /* DMView.h */,
 				D5E8FED41AC6EF9C001DA296 /* DMView.m */,
+				5C5E6D3F1AC72D4D009DC264 /* DebtCell.h */,
+				5C5E6D401AC72D4D009DC264 /* DebtCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -435,17 +445,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C5E6D2F1AC6FB9F009DC264 /* Debt.m in Sources */,
 				5C5E6D231AC6FA09009DC264 /* NSStringAdditions.m in Sources */,
 				D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */,
+				5C5E6D471AC7347B009DC264 /* User.m in Sources */,
+				5C5E6D4A1AC747D0009DC264 /* DMSettingsController.m in Sources */,
 				5C5E6D1C1AC6F7A0009DC264 /* DataManager.m in Sources */,
 				D5E8FEEF1AC6EF9C001DA296 /* APPhoneWithLabel.m in Sources */,
 				5C5E6D1D1AC6F7A0009DC264 /* MainContextObject.m in Sources */,
 				D5E8FEEC1AC6EF9C001DA296 /* APAddress.m in Sources */,
 				D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */,
+				5C5E6D411AC72D4D009DC264 /* DebtCell.m in Sources */,
 				D5E8FEF31AC6F410001DA296 /* DMViewController.m in Sources */,
 				D5E8FEEE1AC6EF9C001DA296 /* APContact.m in Sources */,
-				5C5E6D2C1AC6FB9E009DC264 /* User.m in Sources */,
+				5C5E6D441AC7347A009DC264 /* Debt.m in Sources */,
 				D5E8FEED1AC6EF9C001DA296 /* APAddressBook.m in Sources */,
 				D5E8FEEA1AC6EF9C001DA296 /* DMMainViewController.m in Sources */,
 				D5E8FEF61AC6F4F7001DA296 /* DMAddDebtViewController.m in Sources */,
