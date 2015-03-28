@@ -67,7 +67,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZmM-ca-CPa">
-                                                    <rect key="frame" x="933" y="8" width="500" height="30"/>
+                                                    <rect key="frame" x="748" y="8" width="400" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,7 +78,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Feb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vXq-zA-hH2">
-                                                    <rect key="frame" x="1374" y="36" width="58" height="22"/>
+                                                    <rect key="frame" x="1087" y="36" width="59" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.81960784310000001" green="0.84705882349999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>

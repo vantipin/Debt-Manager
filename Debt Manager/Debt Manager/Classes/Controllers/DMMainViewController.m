@@ -49,6 +49,28 @@
         self.balanceView.hidden = NO;
         
         //configure balance view
+        NSInteger maxBorrowed = [[DataManager sharedInstance] valueForKey:DefaultRecommendedValueBorrow].intValue;
+        NSInteger maxLent = [[DataManager sharedInstance] valueForKey:DefaultRecommendedValueLend].intValue;
+        
+        NSInteger currentBorrowed = [[DataManager sharedInstance] amountForType:BORROW_TYPE];
+        NSInteger currentLent     = [[DataManager sharedInstance] amountForType:LEND_TYPE];
+        
+        self.borrowBalanceLabel.text = [NSString stringWithFormat:@"%ld/%ld",currentBorrowed ,(long)maxBorrowed];
+        self.borrowBalanceLabel.text = [NSString stringWithFormat:@"%ld/%ld",currentLent, (long)maxLent];
+        
+        if (currentBorrowed > maxBorrowed) {
+            self.borrowBalanceLabel.textColor = [UIColor redColor];
+        }
+        else {
+            self.borrowBalanceLabel.textColor = [UIColor grayColor];
+        }
+        
+        if (currentLent > maxLent) {
+            self.lendBalanceLabel.textColor = [UIColor redColor];
+        }
+        else {
+            self.lendBalanceLabel.textColor = [UIColor grayColor];
+        }
     }
 }
 
