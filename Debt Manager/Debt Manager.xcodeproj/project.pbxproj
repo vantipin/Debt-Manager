@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C5E6D151AC6F1A0009DC264 /* arrowsUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D131AC6F1A0009DC264 /* arrowsUpDown.png */; };
+		5C5E6D161AC6F1A0009DC264 /* arrowsUpDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E6D141AC6F1A0009DC264 /* arrowsUpDown@2x.png */; };
 		D548A8501AC67962002D7DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A84F1AC67962002D7DCB /* main.m */; };
 		D548A8531AC67962002D7DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D548A8521AC67962002D7DCB /* AppDelegate.m */; };
 		D548A8561AC67962002D7DCB /* Debt_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C5E6D131AC6F1A0009DC264 /* arrowsUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowsUpDown.png; sourceTree = "<group>"; };
+		5C5E6D141AC6F1A0009DC264 /* arrowsUpDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowsUpDown@2x.png"; sourceTree = "<group>"; };
 		D548A84A1AC67962002D7DCB /* Debt Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548A84E1AC67962002D7DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D548A84F1AC67962002D7DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		D5E8FEC51AC6EF9C001DA296 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5C5E6D131AC6F1A0009DC264 /* arrowsUpDown.png */,
+				5C5E6D141AC6F1A0009DC264 /* arrowsUpDown@2x.png */,
 				D5E8FEC61AC6EF9C001DA296 /* addIcon.png */,
 				D5E8FEC71AC6EF9C001DA296 /* addIcon@2x.png */,
 				D5E8FEC81AC6EF9C001DA296 /* backButtonIndicator.png */,
@@ -316,6 +322,7 @@
 			files = (
 				D5E8FEE41AC6EF9C001DA296 /* backButtonIndicator.png in Resources */,
 				D5E8FEE81AC6EF9C001DA296 /* settingsIcon.png in Resources */,
+				5C5E6D151AC6F1A0009DC264 /* arrowsUpDown.png in Resources */,
 				D5E8FEE31AC6EF9C001DA296 /* addIcon@2x.png in Resources */,
 				D5E8FEE51AC6EF9C001DA296 /* backButtonIndicator@2x.png in Resources */,
 				D5E8FEE61AC6EF9C001DA296 /* contactsIcon.png in Resources */,
@@ -325,6 +332,7 @@
 				D548A85C1AC67962002D7DCB /* Main.storyboard in Resources */,
 				D548A8611AC67962002D7DCB /* LaunchScreen.xib in Resources */,
 				D548A85E1AC67962002D7DCB /* Images.xcassets in Resources */,
+				5C5E6D161AC6F1A0009DC264 /* arrowsUpDown@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
