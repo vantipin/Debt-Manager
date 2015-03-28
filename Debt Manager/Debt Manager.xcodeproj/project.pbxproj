@@ -147,6 +147,7 @@
 				5C5E6D191AC6F7A0009DC264 /* DataManager.m */,
 				5C5E6D1A1AC6F7A0009DC264 /* MainContextObject.h */,
 				5C5E6D1B1AC6F7A0009DC264 /* MainContextObject.m */,
+				D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,9 +200,7 @@
 				D548A8521AC67962002D7DCB /* AppDelegate.m */,
 				5C5E6D3C1AC705E4009DC264 /* Constants.h */,
 				D548A85A1AC67962002D7DCB /* Main.storyboard */,
-				D548A85D1AC67962002D7DCB /* Images.xcassets */,
 				D548A85F1AC67962002D7DCB /* LaunchScreen.xib */,
-				D548A8541AC67962002D7DCB /* Debt_Manager.xcdatamodeld */,
 				D548A84D1AC67962002D7DCB /* Supporting Files */,
 			);
 			path = "Debt Manager";
@@ -210,6 +209,7 @@
 		D548A84D1AC67962002D7DCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D548A85D1AC67962002D7DCB /* Images.xcassets */,
 				5C5E6D281AC6FAF7009DC264 /* Frameworks */,
 				D548A84E1AC67962002D7DCB /* Info.plist */,
 				D548A84F1AC67962002D7DCB /* main.m */,
@@ -664,7 +664,8 @@
 				D548A8551AC67962002D7DCB /* Debt_Manager.xcdatamodel */,
 			);
 			currentVersion = D548A8551AC67962002D7DCB /* Debt_Manager.xcdatamodel */;
-			path = Debt_Manager.xcdatamodeld;
+			name = Debt_Manager.xcdatamodeld;
+			path = ../../Debt_Manager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
