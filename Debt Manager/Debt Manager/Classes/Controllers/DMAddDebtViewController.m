@@ -126,7 +126,7 @@
         
         [self.debttypeButton setImage:[UIImage imageNamed:debtMode ? @"borrowIcon@2x.png" : @"lendIcon@2x.png"] forState:UIControlStateNormal];
         
-        [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
+//        [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
         
         [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
         

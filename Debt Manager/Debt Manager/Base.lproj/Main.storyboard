@@ -354,6 +354,18 @@
                                             <action selector="addBorrowPressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="cG3-S6-2Ii"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F4o-1t-K0O" userLabel="Close debt">
+                                        <rect key="frame" x="224" y="20" width="96" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" image="closeDebt.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeDebt:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="xqk-wl-jI1"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDK-kV-63e">
                                         <rect key="frame" x="96" y="28" width="128" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -418,7 +430,7 @@ You can configure limits via Settings</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zbu-F7-s0H">
-                                <rect key="frame" x="16" y="526" width="294" height="30"/>
+                                <rect key="frame" x="16" y="514" width="294" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Add Debt">
@@ -429,8 +441,21 @@ You can configure limits via Settings</string>
                                     <action selector="addBorrowPressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="PIH-8M-79T"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g2m-Ah-oi7">
+                                <rect key="frame" x="16" y="514" width="294" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Close Debt" image="closeDebt.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeDebt:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="Y3n-FY-63W"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Debt details" textAlignment="center" id="paF-5S-hGS" userLabel="description">
-                                <rect key="frame" x="16" y="291.99999958011529" width="294" height="226"/>
+                                <rect key="frame" x="16" y="291.99999701352135" width="294" height="96"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -441,7 +466,7 @@ You can configure limits via Settings</string>
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q0o-P0-Cpt" userLabel="descr button">
-                                <rect key="frame" x="16" y="292" width="294" height="226"/>
+                                <rect key="frame" x="16" y="292" width="294" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -516,6 +541,19 @@ You can configure limits via Settings</string>
                         <outlet property="userPicImageView" destination="smd-75-qil" id="QOX-wi-k3X"/>
                         <outletCollection property="addDebtButtons" destination="zbu-F7-s0H" id="0Kh-hk-OfR"/>
                         <outletCollection property="addDebtButtons" destination="jeJ-qH-vKr" id="wiH-G3-TdH"/>
+                        <outletCollection property="hidableControls" destination="jeJ-qH-vKr" id="MDB-Rt-Lqb"/>
+                        <outletCollection property="hidableControls" destination="zbu-F7-s0H" id="Th3-ca-3az"/>
+                        <outletCollection property="unusedDetailsControls" destination="paF-5S-hGS" id="hfE-cN-XqH"/>
+                        <outletCollection property="unusedDetailsControls" destination="q0o-P0-Cpt" id="caq-d0-Wcq"/>
+                        <outletCollection property="hidableControls" destination="K0Y-FX-KIB" id="gAb-fl-zBP"/>
+                        <outletCollection property="unusedDetailsControls" destination="d7m-on-XEp" id="FaE-vE-MOc"/>
+                        <outletCollection property="unusedDetailsControls" destination="Sgg-UF-NkI" id="OlY-e0-BG2"/>
+                        <outletCollection property="unusedDetailsControls" destination="CIi-Oo-vi1" id="LHr-Ip-meI"/>
+                        <outletCollection property="unusedDetailsControls" destination="eTL-07-HCx" id="o64-MA-fPp"/>
+                        <outletCollection property="unusedDetailsControls" destination="eiD-T2-UaC" id="udq-rQ-2pH"/>
+                        <outletCollection property="unusedDetailsControls" destination="7Wz-0e-tQ8" id="VFX-p2-UNs"/>
+                        <outletCollection property="detailsControls" destination="g2m-Ah-oi7" id="GS0-SE-9ku"/>
+                        <outletCollection property="detailsControls" destination="F4o-1t-K0O" id="BxR-BV-6OI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwy-Jg-Ha1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -634,6 +672,7 @@ You can configure limits via Settings</string>
         <image name="arrowsUpDown.png" width="45" height="45"/>
         <image name="backButtonIndicator.png" width="14" height="26"/>
         <image name="borrowIcon.png" width="108" height="76"/>
+        <image name="closeDebt.png" width="43" height="24"/>
         <image name="lendIcon.png" width="99" height="79"/>
         <image name="settingsIcon.png" width="44" height="46"/>
         <image name="splashScreenIcon.png" width="93" height="85"/>
