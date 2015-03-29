@@ -23,7 +23,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
+    self.borrowLimitTextField.text = [[[DataManager sharedInstance] valueForKey:DefaultRecommendedValueBorrow] stringValue];
+    self.lendLimitTextField.text = [[[DataManager sharedInstance] valueForKey:DefaultRecommendedValueLend] stringValue];
 }
 
 - (void)didReceiveMemoryWarning {
