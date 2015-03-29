@@ -135,6 +135,22 @@
         if (self.debt) {
             NSString *labelName = debtMode ? @"Borrow details" : @"Lend details";
             [self setTitleName:labelName];
+            
+            [self.amountTextField setText:[NSString stringWithFormat:@"%.0lf", [self.debt.amount floatValue]]];
+            
+            [self.nameLabel setText:self.debt.user.name];
+            
+            if (self.debt.descriptionDebt) {
+                [self.borrowTextView setText:self.debt.descriptionDebt];
+            }
+            
+            if (self.debt.imageUrl) {
+                UIImage *image = [DataManager imageForID:self.debt.imageUrl];
+                
+                if (image) {
+                    [self.userPicImageView setImage:image];
+                }
+            }
         } else {
             NSString *labelName = debtMode ? @"Borrow" : @"Lend";
             [self setTitleName:labelName];
