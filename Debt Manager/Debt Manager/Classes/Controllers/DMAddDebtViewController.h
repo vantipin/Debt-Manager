@@ -9,7 +9,7 @@
 #import "DMViewController.h"
 #import "Debt.h"
 
-@interface DMAddDebtViewController : DMViewController
+@interface DMAddDebtViewController : DMViewController <UIAlertViewDelegate>
 
 @property (nonatomic) Debt *debt;
 @property (weak, nonatomic) IBOutlet UIButton *bottomAddDebtButton;

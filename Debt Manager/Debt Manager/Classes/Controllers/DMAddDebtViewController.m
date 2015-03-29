@@ -29,10 +29,14 @@
 #define RecommendedFormat @"Your recommended amount to %@ %@%li\nYou can configure limits via Settings"
 
 @interface DMAddDebtViewController () <DMContactsDelegate, UITextFieldDelegate, UITextViewDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
-
+{
+    float keyBoardY;
+    float currentViewYMargin;
+}
 @property (nonatomic, assign) BOOL contactsShown;
 @property (nonatomic, strong) DMContactsPopoverController *popoverController;
 @property (nonatomic, strong) APContact *selectedContact;
+@property (nonatomic, strong) UIAlertView *alert;
 
 @end
 
@@ -51,6 +55,10 @@
             [button setEnabled:NO];
         }
     }
+    
+    keyBoardY = 0.0;
+    currentViewYMargin = 0.0;
+
     
     [self configureCurrentRecommendedValue];
     
@@ -78,6 +86,9 @@
         
         [self setDebtMode:([self.debt.typeDebt integerValue] == BORROW_TYPE) force:YES];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:self.view.window];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardWillHideNotification object:self.view.window];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -90,6 +101,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    CALayer *imageLayer = self.userPicImageView.layer;
+    [imageLayer setCornerRadius:self.userPicImageView.frame.size.width / 2];
+    [imageLayer setMasksToBounds:YES];
     
     if (self.showContactsOnViewWillAppear) {
         self.showContactsOnViewWillAppear = NO;
@@ -108,16 +123,19 @@
 
 - (void)configureCurrentRecommendedValue
 {
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    id objectForKey = [standardUserDefaults objectForKey:DefaultRecommendedValue];
-    
-    NSInteger recommendedValue = objectForKey ? [objectForKey integerValue] : 300;
+    NSInteger maxValue;
+    if (debtMode) {
+        maxValue = [[DataManager sharedInstance] valueForKey:DefaultRecommendedValueBorrow].intValue;
+    }
+    else {
+        maxValue = [[DataManager sharedInstance] valueForKey:DefaultRecommendedValueLend].intValue;
+    }
     
     NSInteger currentValue = [[DataManager sharedInstance] amountForType:debtMode ? BORROW_TYPE : LEND_TYPE];
     
-    recommendedValue = MAX(0, recommendedValue - currentValue);
+    maxValue = MAX(0, maxValue - currentValue);
     
-    [self.recommendedLabel setText:[NSString stringWithFormat:RecommendedFormat, debtMode ? BorrowType : LendType, [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol], (long)recommendedValue]];
+    [self.recommendedLabel setText:[NSString stringWithFormat:RecommendedFormat, debtMode ? BorrowType : LendType, [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol], (long)maxValue]];
 }
 
 - (void)setDebtMode:(BOOL)aDebtMode force:(BOOL)aForce
@@ -406,12 +424,12 @@
 
 - (IBAction)closeDebt:(id)sender
 {
-    if (self.debt) {
-        self.debt.isClosed = @YES;
-        
-        [[DataManager sharedInstance] save];
-        [self backPressed:nil];
-    }
+    self.alert = [[UIAlertView alloc] initWithTitle:nil
+                                            message:@"Close record?"
+                                           delegate:self
+                                  cancelButtonTitle:@"Cancel"
+                                  otherButtonTitles:@"Confirm", nil];
+    [self.alert show];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
@@ -513,6 +531,77 @@
 - (void)reminderPressed:(id)sender
 {
     
+}
+
+
+#pragma mark - AlertView Delegate
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1 && alertView == self.alert) {
+        self.alert = nil;
+        if (self.debt) {
+            self.debt.isClosed = @YES;
+            
+            [[DataManager sharedInstance] save];
+            [self backPressed:nil];
+        }
+    }
+}
+
+#pragma mark keyboard manage selectors
+- (void)keyboardDidShow:(NSNotification *)notification {
+    
+    
+    if ([self.borrowTextView isFirstResponder]) {
+        NSDictionary* info = [notification userInfo];
+        
+        NSValue *aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+        CGRect keyboardRect = [self.view convertRect:[aValue CGRectValue] fromView:nil];
+        keyBoardY = keyboardRect.origin.y;
+        
+        CGRect textFieldRect = self.borrowTextView.frame;
+        
+        float moveDiff = keyBoardY - (textFieldRect.origin.y + textFieldRect.size.height) - 20;
+        if (moveDiff < 0) {
+            
+            currentViewYMargin = moveDiff;
+            
+            
+            [UIView animateWithDuration:0.2 animations:^{
+                self.view.frame = CGRectMake(self.view.frame.origin.x,
+                                             self.view.frame.origin.y + moveDiff,
+                                             self.view.frame.size.width,
+                                             self.view.frame.size.height - moveDiff);
+                self.borrowTextView.frame = CGRectMake(self.borrowTextView.frame.origin.x,
+                                             self.borrowTextView.frame.origin.y + moveDiff,
+                                             self.borrowTextView.frame.size.width,
+                                             self.borrowTextView.frame.size.height - moveDiff);
+            }];
+        }
+        else {
+            currentViewYMargin = 0;
+        }
+    }
+
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification {
+    
+    if (currentViewYMargin) {
+        
+        [UIView animateWithDuration:0.15 animations:^{
+            self.view.frame = CGRectMake(self.view.frame.origin.x,
+                                         self.view.frame.origin.y - currentViewYMargin,
+                                         self.view.frame.size.width,
+                                         self.view.frame.size.height + currentViewYMargin);
+            self.borrowTextView.frame = CGRectMake(self.borrowTextView.frame.origin.x,
+                                         self.borrowTextView.frame.origin.y - currentViewYMargin,
+                                         self.borrowTextView.frame.size.width,
+                                         self.borrowTextView.frame.size.height + currentViewYMargin);
+        }];
+        
+        currentViewYMargin = 0;
+    }
 }
 
 @end

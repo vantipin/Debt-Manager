@@ -10,4 +10,11 @@
 
 @implementation DMContactCell
 
+-(void)awakeFromNib
+{
+    CALayer *imageLayer = self.avatarImageView.layer;
+    [imageLayer setCornerRadius:self.avatarImageView.frame.size.width / 2];
+    [imageLayer setMasksToBounds:YES];
+}
+
 @end
