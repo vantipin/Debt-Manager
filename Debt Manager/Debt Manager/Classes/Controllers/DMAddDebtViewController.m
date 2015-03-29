@@ -61,6 +61,22 @@
     [dateFormatter setDateFormat:@"dd MMM"];
     
     [self.dateButton setTitle:[dateFormatter stringFromDate:date] forState:UIControlStateNormal];
+    
+    if (self.debt) {
+        for (UIView *view in self.unusedDetailsControls) {
+            [view setUserInteractionEnabled:NO];
+        }
+        
+        for (UIView *view in self.hidableControls) {
+            [view setHidden:YES];
+        }
+        
+        for (UIView *view in self.detailsControls) {
+            [view setHidden:NO];
+        }
+        
+        [self setDebtMode:([self.debt.typeDebt integerValue] == BORROW_TYPE) force:YES];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -112,14 +128,34 @@
         
         [self.debttypeButton setImage:[UIImage imageNamed:debtMode ? @"borrowIcon@2x.png" : @"lendIcon@2x.png"] forState:UIControlStateNormal];
         
-        [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
+//        [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
         
         [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
         
-        NSString *labelName = debtMode ? @"Add borrow" : @"Add lend";
-        [self setTitleName:labelName];
-        [self.bottomAddDebtButton setTitle:labelName forState:UIControlStateNormal];
-        
+        if (self.debt) {
+            NSString *labelName = debtMode ? @"Borrow details" : @"Lend details";
+            [self setTitleName:labelName];
+            
+            [self.amountTextField setText:[NSString stringWithFormat:@"%.0lf", [self.debt.amount floatValue]]];
+            
+            [self.nameLabel setText:self.debt.user.name];
+            
+            if (self.debt.descriptionDebt) {
+                [self.borrowTextView setText:self.debt.descriptionDebt];
+            }
+            
+            if (self.debt.imageUrl) {
+                UIImage *image = [DataManager imageForID:self.debt.imageUrl];
+                
+                if (image) {
+                    [self.userPicImageView setImage:image];
+                }
+            }
+        } else {
+            NSString *labelName = debtMode ? @"Borrow" : @"Lend";
+            [self setTitleName:labelName];
+            [self.bottomAddDebtButton setTitle:labelName forState:UIControlStateNormal];
+        }
         
         if (debtMode) {
             
@@ -365,6 +401,26 @@
     }
     
     return YES;
+}
+
+- (IBAction)closeDebt:(id)sender
+{
+    if (self.debt) {
+        self.debt.isClosed = @YES;
+        
+        [[DataManager sharedInstance] save];
+        [self backPressed:nil];
+    }
+}
+
+- (void)sendMailPressed:(id)sender
+{
+    
+}
+
+- (void)reminderPressed:(id)sender
+{
+    
 }
 
 @end
