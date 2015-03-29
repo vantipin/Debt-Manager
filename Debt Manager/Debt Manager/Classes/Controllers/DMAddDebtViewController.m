@@ -235,12 +235,9 @@
             [DataManager saveImage:self.selectedContact.thumbnail withId:stringId];
         }
         
-        NSArray *users = [User fetchObjectWithParameters:@{@"idUser" : stringId}];
-        User *user = nil;
+        User *user = [User fetchObjectWithParameters:@{@"idUser" : stringId}];
         
-        if (users.count > 0) {
-            user = [users lastObject];
-        } else {
+        if (!user) {
             user = [User object];
             user.idUser = stringId;
         }
