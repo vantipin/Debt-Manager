@@ -74,6 +74,8 @@
         for (UIView *view in self.detailsControls) {
             [view setHidden:NO];
         }
+        
+        [self setDebtMode:([self.debt.typeDebt integerValue] == BORROW_TYPE) force:YES];
     }
 }
 
@@ -130,10 +132,14 @@
         
         [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
         
-        NSString *labelName = debtMode ? @"Add borrow" : @"Add lend";
-        [self setTitleName:labelName];
-        [self.bottomAddDebtButton setTitle:labelName forState:UIControlStateNormal];
-        
+        if (self.debt) {
+            NSString *labelName = debtMode ? @"Borrow details" : @"Lend details";
+            [self setTitleName:labelName];
+        } else {
+            NSString *labelName = debtMode ? @"Borrow" : @"Lend";
+            [self setTitleName:labelName];
+            [self.bottomAddDebtButton setTitle:labelName forState:UIControlStateNormal];
+        }
         
         if (debtMode) {
             
