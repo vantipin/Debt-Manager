@@ -25,6 +25,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    CALayer *imageLayer = self.image.layer;
+    [imageLayer setCornerRadius:self.image.frame.size.width / 2];
+    [imageLayer setMasksToBounds:YES];
 }
 
 - (void)setDebt:(Debt *)debt
