@@ -20,8 +20,8 @@
 #define DefaultDebtDetailsText @"Debt details"
 #define DefaultAmountText @"100"
 
-#define BorrowColor [UIColor colorWithRed:240. / 255. green:1. blue:240. / 255. alpha:1.]
-#define LendColor [UIColor colorWithRed:1. green:240. / 255. blue:240. / 255. alpha:1.]
+#define BorrowColor [UIColor colorWithRed:240. / 255. green:240. / 255. blue:240. / 255. alpha:1.]
+#define LendColor [UIColor colorWithRed:240. / 255. green:240. / 255. blue:240. / 255. alpha:1.]
 
 #define BorrowType @"borrow"
 #define LendType @"lend"
@@ -47,9 +47,11 @@
         debtMode = YES;
         
         for (UIButton *button in self.addDebtButtons) {
-            [button setEnabled:YES];
+            [button setEnabled:NO];
         }
     }
+    
+    [self configureCurrentRecommendedValue];
     
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -87,17 +89,26 @@
     [self hidePopover];
 }
 
+- (void)configureCurrentRecommendedValue
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    id objectForKey = [standardUserDefaults objectForKey:DefaultRecommendedValue];
+    
+    NSInteger recommendedValue = objectForKey ? [objectForKey integerValue] : 300;
+    
+    NSInteger currentValue = [[DataManager sharedInstance] amountForType:debtMode ? BORROW_TYPE : LEND_TYPE];
+    
+    recommendedValue = MAX(0, recommendedValue - currentValue);
+    
+    [self.recommendedLabel setText:[NSString stringWithFormat:RecommendedFormat, debtMode ? BorrowType : LendType, [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol], (long)recommendedValue]];
+}
+
 - (void)setDebtMode:(BOOL)aDebtMode force:(BOOL)aForce
 {
     if (aDebtMode != debtMode || aForce) {
         debtMode = aDebtMode;
         
-        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-        id objectForKey = [standardUserDefaults objectForKey:DefaultRecommendedValue];
-        
-        NSInteger recommendedValue = objectForKey ? [objectForKey integerValue] : 300;
-        
-        [self.recommendedLabel setText:[NSString stringWithFormat:RecommendedFormat, debtMode ? BorrowType : LendType, [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol], (long)recommendedValue]];
+        [self configureCurrentRecommendedValue];
         
         [self.debttypeButton setImage:[UIImage imageNamed:debtMode ? @"borrowIcon@2x.png" : @"lendIcon@2x.png"] forState:UIControlStateNormal];
         
@@ -278,6 +289,8 @@
         debt.typeDebt = [NSNumber numberWithInteger:debtMode ? BORROW_TYPE : LEND_TYPE];
         
         [[DataManager sharedInstance] save];
+        
+        [self backPressed:nil];
     }
 }
 
