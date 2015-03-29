@@ -61,6 +61,20 @@
     [dateFormatter setDateFormat:@"dd MMM"];
     
     [self.dateButton setTitle:[dateFormatter stringFromDate:date] forState:UIControlStateNormal];
+    
+    if (self.debt) {
+        for (UIView *view in self.unusedDetailsControls) {
+            [view setUserInteractionEnabled:NO];
+        }
+        
+        for (UIView *view in self.hidableControls) {
+            [view setHidden:YES];
+        }
+        
+        for (UIView *view in self.detailsControls) {
+            [view setHidden:NO];
+        }
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -365,6 +379,26 @@
     }
     
     return YES;
+}
+
+- (IBAction)closeDebt:(id)sender
+{
+    if (self.debt) {
+        self.debt.isClosed = @YES;
+        
+        [[DataManager sharedInstance] save];
+        [self backPressed:nil];
+    }
+}
+
+- (void)sendMailPressed:(id)sender
+{
+    
+}
+
+- (void)reminderPressed:(id)sender
+{
+    
 }
 
 @end

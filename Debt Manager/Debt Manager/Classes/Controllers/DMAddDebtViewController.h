@@ -26,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *descrButton;
 @property (weak, nonatomic) IBOutlet UILabel *borrowTypeLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *addDebtButtons;
+@property (strong, nonatomic) IBOutletCollection(id) NSArray *unusedDetailsControls;
+@property (strong, nonatomic) IBOutletCollection(id) NSArray *hidableControls;
+@property (strong, nonatomic) IBOutletCollection(id) NSArray *detailsControls;
 
 
 @property (nonatomic, assign) BOOL debtMode;
@@ -39,5 +42,8 @@
 - (IBAction)addBorrowPressed:(id)sender;
 - (IBAction)debtTypePressed:(id)sender;
 
+- (IBAction)closeDebt:(id)sender;
+- (IBAction)sendMailPressed:(id)sender;
+- (IBAction)reminderPressed:(id)sender;
 
 @end
