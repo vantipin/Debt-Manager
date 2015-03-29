@@ -67,6 +67,7 @@
 		D5E8FEFD1AC737EB001DA296 /* DMContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFC1AC737EB001DA296 /* DMContactCell.m */; };
 		D5E8FF001AC73A17001DA296 /* DMContactsPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */; };
 		D5E8FF041AC769A3001DA296 /* NSManagedObject+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E8FF031AC769A3001DA296 /* NSManagedObject+Queries.m */; };
+		D5E8FF061AC7988E001DA296 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E8FF051AC7988E001DA296 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		D5E8FEFF1AC73A17001DA296 /* DMContactsPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMContactsPopoverController.m; sourceTree = "<group>"; };
 		D5E8FF021AC769A3001DA296 /* NSManagedObject+Queries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Queries.h"; sourceTree = "<group>"; };
 		D5E8FF031AC769A3001DA296 /* NSManagedObject+Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Queries.m"; sourceTree = "<group>"; };
+		D5E8FF051AC7988E001DA296 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E8FF061AC7988E001DA296 /* MessageUI.framework in Frameworks */,
 				5C5E6D271AC6FACD009DC264 /* Foundation.framework in Frameworks */,
 				5C5E6D251AC6FA9B009DC264 /* CoreFoundation.framework in Frameworks */,
 			);
@@ -206,6 +209,7 @@
 		5C5E6D281AC6FAF7009DC264 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5E8FF051AC7988E001DA296 /* MessageUI.framework */,
 				5C5E6D261AC6FACD009DC264 /* Foundation.framework */,
 				5C5E6D241AC6FA9B009DC264 /* CoreFoundation.framework */,
 			);

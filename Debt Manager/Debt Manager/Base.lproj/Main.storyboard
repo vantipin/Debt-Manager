@@ -521,6 +521,36 @@ You can configure limits via Settings</string>
                                     <action selector="debtTypePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="7Ff-gs-UlK"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sPX-GJ-QN8">
+                                <rect key="frame" x="250" y="452" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="email.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMailPressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="AFo-r7-96m"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a06-5a-hhE">
+                                <rect key="frame" x="122" y="452" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="notifications.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reminderPressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="Kmb-zB-pbe"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2py-83-Kfy">
+                                <rect key="frame" x="186" y="452" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="messages.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="HSd-bG-DO8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97078900215389186" green="0.97078900215389186" blue="0.97078900215389186" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -554,6 +584,9 @@ You can configure limits via Settings</string>
                         <outletCollection property="unusedDetailsControls" destination="7Wz-0e-tQ8" id="VFX-p2-UNs"/>
                         <outletCollection property="detailsControls" destination="g2m-Ah-oi7" id="GS0-SE-9ku"/>
                         <outletCollection property="detailsControls" destination="F4o-1t-K0O" id="BxR-BV-6OI"/>
+                        <outletCollection property="detailsControls" destination="a06-5a-hhE" id="f1v-wb-Luc"/>
+                        <outletCollection property="detailsControls" destination="2py-83-Kfy" id="ydH-gL-Smj"/>
+                        <outletCollection property="detailsControls" destination="sPX-GJ-QN8" id="D51-aA-Vvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwy-Jg-Ha1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -673,7 +706,10 @@ You can configure limits via Settings</string>
         <image name="backButtonIndicator.png" width="14" height="26"/>
         <image name="borrowIcon.png" width="108" height="76"/>
         <image name="closeDebt.png" width="43" height="24"/>
+        <image name="email.png" width="50" height="36"/>
         <image name="lendIcon.png" width="99" height="79"/>
+        <image name="messages.png" width="57" height="38"/>
+        <image name="notifications.png" width="59" height="59"/>
         <image name="settingsIcon.png" width="44" height="46"/>
         <image name="splashScreenIcon.png" width="93" height="85"/>
         <image name="userPicLargePlaceholder.png" width="114" height="114"/>

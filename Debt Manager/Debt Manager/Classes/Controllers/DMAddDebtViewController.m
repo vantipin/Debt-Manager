@@ -14,6 +14,7 @@
 #import "APContact.h"
 #import "DataManager.h"
 #import "DMContactsPopoverController.h"
+#import <MessageUI/MessageUI.h>
 
 #define DefaultRecommendedValue @"DefaultRecommendedValue"
 #define ContactPopoverId @"ContactCollectionPopoverID"
@@ -27,7 +28,7 @@
 #define LendType @"lend"
 #define RecommendedFormat @"Your recommended amount to %@ %@%li\nYou can configure limits via Settings"
 
-@interface DMAddDebtViewController () <DMContactsDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface DMAddDebtViewController () <DMContactsDelegate, UITextFieldDelegate, UITextViewDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, assign) BOOL contactsShown;
 @property (nonatomic, strong) DMContactsPopoverController *popoverController;
@@ -413,9 +414,100 @@
     }
 }
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            break;
+            
+        case MFMailComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send email!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)sendMailPressed:(id)sender
 {
+    if(![MFMailComposeViewController canSendMail]) {
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [warningAlert show];
+        return;
+    }
     
+    NSArray *recipents = nil;
+    
+    if (self.debt.user.email) {
+        recipents = @[self.debt.user.email];
+    }
+    
+    NSString *message = [NSString stringWithFormat:@"111"];
+    
+    MFMailComposeViewController *messageController = [[MFMailComposeViewController alloc] init];
+    messageController.mailComposeDelegate = self;
+    [messageController setToRecipients:recipents];
+    [messageController setMessageBody:message isHTML:NO];
+    
+    // Present message view controller on screen
+    [self presentViewController:messageController animated:YES completion:nil];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+            
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)sendMessagePressed:(id)sender
+{
+    if(![MFMessageComposeViewController canSendText]) {
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [warningAlert show];
+        return;
+    }
+    
+    NSArray *recipents = nil;
+    
+    if (self.debt.user.phoneNumber) {
+        recipents = @[self.debt.user.phoneNumber];
+    }
+    
+    NSString *message = [NSString stringWithFormat:@"111"];
+    
+    MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+    messageController.messageComposeDelegate = self;
+    [messageController setRecipients:recipents];
+    [messageController setBody:message];
+    
+    // Present message view controller on screen
+    [self presentViewController:messageController animated:YES completion:nil];
 }
 
 - (void)reminderPressed:(id)sender

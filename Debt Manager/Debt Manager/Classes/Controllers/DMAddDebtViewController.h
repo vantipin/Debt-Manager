@@ -44,6 +44,7 @@
 
 - (IBAction)closeDebt:(id)sender;
 - (IBAction)sendMailPressed:(id)sender;
+- (IBAction)sendMessagePressed:(id)sender;
 - (IBAction)reminderPressed:(id)sender;
 
 @end
