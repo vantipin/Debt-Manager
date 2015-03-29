@@ -551,6 +551,11 @@ You can configure limits via Settings</string>
                                     <action selector="sendMessagePressed:" destination="NHa-R1-0Wa" eventType="touchUpInside" id="HSd-bG-DO8"/>
                                 </connections>
                             </button>
+                            <view userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" id="QmH-k5-DgN" userLabel="Text amount line">
+                                <rect key="frame" x="16" y="514" width="294" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97078900215389186" green="0.97078900215389186" blue="0.97078900215389186" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
