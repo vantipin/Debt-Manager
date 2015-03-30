@@ -113,16 +113,6 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="75I-Co-ANg">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Qe9-oh-aKd" kind="push" id="3UP-2o-Ipr"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" id="SNs-bs-hGa">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,6 +161,16 @@
                                             </label>
                                         </subviews>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="75I-Co-ANg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Qe9-oh-aKd" kind="push" id="3UP-2o-Ipr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97059494933647217" green="0.9693634461064301" blue="0.99087474004753417" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -178,15 +178,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YIO-qt-eUy">
-                                        <rect key="frame" x="269" y="25" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <state key="normal" image="addIcon.png"/>
-                                        <connections>
-                                            <segue destination="NHa-R1-0Wa" kind="push" identifier="addDebtSeague" id="Tdz-5k-aGy"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Meb-3V-uww">
                                         <rect key="frame" x="15" y="25" width="34" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -194,6 +185,15 @@
                                         <state key="normal" image="settingsIcon.png"/>
                                         <connections>
                                             <segue destination="Qe9-oh-aKd" kind="push" id="5hB-iI-iPW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YIO-qt-eUy">
+                                        <rect key="frame" x="269" y="25" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="addIcon.png"/>
+                                        <connections>
+                                            <segue destination="NHa-R1-0Wa" kind="push" identifier="addDebtSeague" id="Tdz-5k-aGy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -725,7 +725,7 @@ You can configure limits via Settings</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="3UP-2o-Ipr"/>
         <segue reference="Tdz-5k-aGy"/>
-        <segue reference="5hB-iI-iPW"/>
     </inferredMetricsTieBreakers>
 </document>
