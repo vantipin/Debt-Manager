@@ -145,11 +145,10 @@
         
         [self configureCurrentRecommendedValue];
         
-        [self.debttypeButton setImage:[UIImage imageNamed:debtMode ? @"borrowIcon@2x.png" : @"lendIcon@2x.png"] forState:UIControlStateNormal];
-        
 //        [self.view setBackgroundColor:(debtMode ? BorrowColor : LendColor)];
         
         [self.borrowTypeLabel setText:(debtMode ? @"Borrow" : @"Lend")];
+        self.borrowIcon.image = [UIImage imageNamed:(debtMode ? @"borrowIcon" : @"lendIcon")];
         
         if (self.debt) {
             NSString *labelName = debtMode ? @"Borrow details" : @"Lend details";
@@ -572,10 +571,6 @@
                                              self.view.frame.origin.y + moveDiff,
                                              self.view.frame.size.width,
                                              self.view.frame.size.height - moveDiff);
-                self.borrowTextView.frame = CGRectMake(self.borrowTextView.frame.origin.x,
-                                             self.borrowTextView.frame.origin.y + moveDiff,
-                                             self.borrowTextView.frame.size.width,
-                                             self.borrowTextView.frame.size.height - moveDiff);
             }];
         }
         else {
@@ -594,10 +589,6 @@
                                          self.view.frame.origin.y - currentViewYMargin,
                                          self.view.frame.size.width,
                                          self.view.frame.size.height + currentViewYMargin);
-            self.borrowTextView.frame = CGRectMake(self.borrowTextView.frame.origin.x,
-                                         self.borrowTextView.frame.origin.y - currentViewYMargin,
-                                         self.borrowTextView.frame.size.width,
-                                         self.borrowTextView.frame.size.height + currentViewYMargin);
         }];
         
         currentViewYMargin = 0;

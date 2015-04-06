@@ -456,7 +456,7 @@ You can configure limits via Settings</string>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Debt details" textAlignment="center" id="paF-5S-hGS" userLabel="description">
                                 <rect key="frame" x="16" y="292" width="288" height="152"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -467,7 +467,7 @@ You can configure limits via Settings</string>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q0o-P0-Cpt" userLabel="descr button">
                                 <rect key="frame" x="16" y="292" width="294" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -496,31 +496,11 @@ You can configure limits via Settings</string>
                                     <action selector="contactNamePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="kSF-sw-wfZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1O-Hk-z9Q">
-                                <rect key="frame" x="183" y="245" width="92" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="scaleToFill" id="ylH-8a-Tk8" userLabel="Text amount line">
                                 <rect key="frame" x="45" y="137" width="215" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d7m-on-XEp" userLabel="Debt type">
-                                <rect key="frame" x="187" y="174" width="84" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="borrowIcon.png"/>
-                                <connections>
-                                    <action selector="debtTypePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="7Ff-gs-UlK"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.19999999999999968" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowsUpDown.png" id="K0Y-FX-KIB">
-                                <rect key="frame" x="274" y="174" width="30" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sPX-GJ-QN8">
                                 <rect key="frame" x="250" y="452" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -556,6 +536,35 @@ You can configure limits via Settings</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" id="JS4-3N-jLI">
+                                <rect key="frame" x="181" y="174" width="123" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.19999999999999968" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowsUpDown.png" id="K0Y-FX-KIB">
+                                        <rect key="frame" x="93" y="0.0" width="30" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1O-Hk-z9Q">
+                                        <rect key="frame" x="0.0" y="71" width="92" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="borrowIcon.png" id="xHR-Fb-gZg">
+                                        <rect key="frame" x="8" y="8" width="84" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d7m-on-XEp" userLabel="Debt type">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="debtTypePressed:" destination="NHa-R1-0Wa" eventType="touchDown" id="7Ff-gs-UlK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97078900215389186" green="0.97078900215389186" blue="0.97078900215389186" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -563,6 +572,7 @@ You can configure limits via Settings</string>
                     <connections>
                         <outlet property="amountButton" destination="CIi-Oo-vi1" id="tJc-kZ-J1s"/>
                         <outlet property="amountTextField" destination="eTL-07-HCx" id="WQo-bE-aq6"/>
+                        <outlet property="borrowIcon" destination="xHR-Fb-gZg" id="azE-tM-48J"/>
                         <outlet property="borrowTextView" destination="paF-5S-hGS" id="vlS-1d-82Q"/>
                         <outlet property="borrowTypeLabel" destination="f1O-Hk-z9Q" id="gHS-0E-c5d"/>
                         <outlet property="bottomAddDebtButton" destination="zbu-F7-s0H" id="xd9-a9-8wP"/>
@@ -580,8 +590,6 @@ You can configure limits via Settings</string>
                         <outletCollection property="hidableControls" destination="zbu-F7-s0H" id="Th3-ca-3az"/>
                         <outletCollection property="unusedDetailsControls" destination="paF-5S-hGS" id="hfE-cN-XqH"/>
                         <outletCollection property="unusedDetailsControls" destination="q0o-P0-Cpt" id="caq-d0-Wcq"/>
-                        <outletCollection property="hidableControls" destination="K0Y-FX-KIB" id="gAb-fl-zBP"/>
-                        <outletCollection property="unusedDetailsControls" destination="d7m-on-XEp" id="FaE-vE-MOc"/>
                         <outletCollection property="unusedDetailsControls" destination="Sgg-UF-NkI" id="OlY-e0-BG2"/>
                         <outletCollection property="unusedDetailsControls" destination="CIi-Oo-vi1" id="LHr-Ip-meI"/>
                         <outletCollection property="unusedDetailsControls" destination="eTL-07-HCx" id="o64-MA-fPp"/>
@@ -592,6 +600,8 @@ You can configure limits via Settings</string>
                         <outletCollection property="detailsControls" destination="a06-5a-hhE" id="f1v-wb-Luc"/>
                         <outletCollection property="detailsControls" destination="2py-83-Kfy" id="ydH-gL-Smj"/>
                         <outletCollection property="detailsControls" destination="sPX-GJ-QN8" id="D51-aA-Vvg"/>
+                        <outletCollection property="hidableControls" destination="K0Y-FX-KIB" id="gAb-fl-zBP"/>
+                        <outletCollection property="unusedDetailsControls" destination="d7m-on-XEp" id="FaE-vE-MOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwy-Jg-Ha1" userLabel="First Responder" sceneMemberID="firstResponder"/>

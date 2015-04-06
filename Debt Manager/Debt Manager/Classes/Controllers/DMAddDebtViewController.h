@@ -21,10 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userPicImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *debttypeButton;
+@property (weak, nonatomic) IBOutlet UIImageView *borrowIcon;
+@property (weak, nonatomic) IBOutlet UILabel *borrowTypeLabel;
 
 @property (weak, nonatomic) IBOutlet UITextView *borrowTextView;
 @property (weak, nonatomic) IBOutlet UIButton *descrButton;
-@property (weak, nonatomic) IBOutlet UILabel *borrowTypeLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *addDebtButtons;
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *unusedDetailsControls;
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *hidableControls;
