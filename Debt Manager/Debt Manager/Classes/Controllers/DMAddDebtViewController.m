@@ -468,15 +468,27 @@
         recipents = @[self.debt.user.email];
     }
     
-    NSString *message = [NSString stringWithFormat:@"111"];
+    NSString *message = [self message];
     
     MFMailComposeViewController *messageController = [[MFMailComposeViewController alloc] init];
     messageController.mailComposeDelegate = self;
     [messageController setToRecipients:recipents];
     [messageController setMessageBody:message isHTML:NO];
+    [messageController setSubject:[self subject]];
     
     // Present message view controller on screen
     [self presentViewController:messageController animated:YES completion:nil];
+}
+
+
+- (NSString *)message
+{
+    return [NSString stringWithFormat:(debtMode ? @"Hi\n\nI remember I owe you %@%@." : @"Hi\n\nRemember you still owe me %@%@?"), self.debt.amount, self.debt.typeMoneyDebt];
+}
+
+-(NSString *)subject
+{
+    return @"Dept";
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
@@ -516,12 +528,13 @@
         recipents = @[self.debt.user.phoneNumber];
     }
     
-    NSString *message = [NSString stringWithFormat:@"111"];
+    NSString *message = [self message];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;
     [messageController setRecipients:recipents];
     [messageController setBody:message];
+    [messageController setSubject:[self subject]];
     
     // Present message view controller on screen
     [self presentViewController:messageController animated:YES completion:nil];
