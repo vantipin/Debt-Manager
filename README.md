@@ -31,4 +31,4 @@ Setup your development team and you should be good to go.
 
 ## License
 
-Chatter uses the MIT license. Please file an issue if you have any questions or if you'd like to share how you're using this project.
+Debt-Manager uses the MIT license. Please file an issue if you have any questions or if you'd like to share how you're using this project.
